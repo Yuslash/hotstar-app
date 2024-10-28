@@ -1,4 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +16,20 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp>
 {
+  Map<String, dynamic> _responseData = {};
+
+  Future<void> fetchData() async {
+    final response = await http.get(Uri.parse('http://192.168.210.18:3000/api'));
+    _responseData = jsonDecode(response.body);
+    setState(() {});
+
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    fetchData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +37,7 @@ class _MyAppState extends State<MyApp>
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: const Text("Hello world"),
+          child: Text(_responseData['message'] ?? 'Loading....'),
         ),
       ),
     );
