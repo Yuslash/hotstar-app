@@ -25,9 +25,13 @@ class _MyAppState extends State<MyApp>
 
   }
 
-  @override
-  void initState() {
-    super.initState();
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   fetchData();
+  // }
+
+  void fetchingButton() {
     fetchData();
   }
 
@@ -37,7 +41,15 @@ class _MyAppState extends State<MyApp>
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: Text(_responseData['message'] ?? 'Loading....'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(_responseData['message'] ?? 'Loading..'),
+              ElevatedButton(onPressed: (){
+                fetchData();
+              }, child: Text('Fetch Data'))
+            ],
+          ),
         ),
       ),
     );
