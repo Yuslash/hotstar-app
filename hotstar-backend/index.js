@@ -2,6 +2,8 @@ import express from 'express'
 import { MongoClient } from 'mongodb'
 import dotenv from 'dotenv'
 import CheckDatabase from './CheckDatabase.js'
+import ShortSeriesApi from './ShortSeriesApi.js'
+import FantasyListApi from './FantasyListApi.js'
 dotenv.config()
 
 
@@ -20,6 +22,8 @@ app.get('/api', (req, res) => {
 })
 
 CheckDatabase(app, client)
+ShortSeriesApi(app, client)
+FantasyListApi(app, client)
 
 app.listen(port, '0.0.0.0', () => {
     console.log(`Server is Running at http://192.168.210.18:${port}`)
