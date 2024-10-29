@@ -14,7 +14,7 @@ class RowList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: marspace.toDouble()),
-      child: Padding(padding: const EdgeInsets.symmetric(horizontal: 5), 
+      child: Padding(padding: const EdgeInsets.symmetric(horizontal: 0), 
         child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -22,7 +22,7 @@ class RowList extends StatelessWidget {
           Text(title, style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 16,
+                  fontSize: 18,
                   )),
           IconButton(onPressed: (){}, icon: const Icon(Icons.chevron_right), iconSize: 24, color: Colors.white,)
         ],
