@@ -24,10 +24,10 @@ class _WatchButtonState extends State<WatchButton> {
                   IconButton(onPressed: (){
                   print("Play button clicked!");
                   }, icon: Image.asset('images/play.png'),
-                  padding: EdgeInsets.zero,
-                  constraints: const BoxConstraints(),),
+                    padding: EdgeInsets.zero,
+                    constraints: const BoxConstraints(),),
                   const Padding(padding:  EdgeInsets.only(right: 15),
-                  child: Text("Watch Free", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.white),),
+                    child: Text("Watch Free", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.white),),
                   ),
           ],
         ),

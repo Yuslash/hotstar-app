@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/listPanels.dart';
 import 'package:hotstar/slideNav.dart';
 import 'package:hotstar/watchbutton.dart';
 
@@ -20,7 +21,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox.expand(
+    return const SizedBox.expand(
 
       child: SingleChildScrollView(
         child: Column(
@@ -29,6 +30,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             SlideNav(),
             WatchButton(),
+            ListPanels(),
           ],
         ),
       ),
