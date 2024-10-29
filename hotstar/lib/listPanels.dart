@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/InnerPanels/continuePanel.dart';
 
 class ListPanels extends StatefulWidget {
   const ListPanels({super.key});
@@ -26,32 +27,7 @@ class _ListPanelsState extends State<ListPanels> {
                 ],
               ),
             ),
-            Container(
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                children: [
-                  Container(
-                    width: 200,
-                    height: 100,
-                    color: Colors.red,
-                  ),
-                  SizedBox(width: 5),
-                  Container(
-                    width: 200,
-                    height: 100,
-                    color: Colors.green,
-                  ),
-                  SizedBox(width: 5),
-                  Container(
-                    width: 200,
-                    height: 100,
-                    color: Colors.blue,
-                  ),
-                ],
-              ),
-              )
-            )
+            ContinuePanel(),
           ],
         ),
       ),
