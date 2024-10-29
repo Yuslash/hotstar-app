@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/NaviBarPage/downloadPage.dart';
+import 'package:hotstar/NaviBarPage/newsPage.dart';
+import 'package:hotstar/NaviBarPage/profilePage.dart';
 import 'package:hotstar/NaviBarPage/searchPage.dart';
 import 'package:hotstar/homePage.dart';
 
@@ -20,8 +23,6 @@ class MyApp extends StatelessWidget {
         body: HomePage(),
         bottomNavigationBar: Builder(builder: (context) => Container(
           
-          
-
           decoration: const BoxDecoration(
         
             border: Border(
@@ -42,23 +43,34 @@ class MyApp extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => const SearchBarPage()));
+                        } else if(index == 2) {
+                          Navigator.push(
+                            context, 
+                            MaterialPageRoute(builder: (context) => const NewsPage())
+                          );
+                        } else if(index == 3) {
+                          Navigator.push(context, 
+                          MaterialPageRoute(builder: (context) => const DownloadPage()));
+                        } else if(index == 4) {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfilePage()));
                         }
+
                       },
                       items: [
                         BottomNavigationBarItem(
-                            icon: Image.asset('images/home.png',),
+                            icon: Image.asset('images/home.png', fit: BoxFit.contain,),
                             label: "Home"),
                         BottomNavigationBarItem(
-                            icon: Image.asset('images/search.png', ),
+                            icon: Image.asset('images/search.png',fit: BoxFit.contain, ),
                             label: "Search"),
                         BottomNavigationBarItem(
-                            icon: Image.asset('images/ligt.png', ),
+                            icon: Image.asset('images/ligt.png',fit: BoxFit.contain, ),
                             label: "News & Hot"),
                         BottomNavigationBarItem(
-                            icon: Image.asset('images/download.png', ),
+                            icon: Image.asset('images/download.png',fit: BoxFit.contain, ),
                             label: "Download"),
                         BottomNavigationBarItem(
-                            icon: Image.asset('images/mic.png', ),
+                            icon: Image.asset('images/mic.png',fit: BoxFit.contain, ),
                             label: "My Space"),
                       ],
                           ),
