@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/slideNav.dart';
+import 'package:hotstar/watchbutton.dart';
 
 const Color _background = Color(0xFF0F1014);
 
@@ -19,8 +21,18 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SizedBox.expand(
-      child: DecoratedBox(decoration: 
-      const BoxDecoration(color: _background)),
+
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            SlideNav(),
+            WatchButton(),
+          ],
+        ),
+      ),
+
     );
   }
 }
