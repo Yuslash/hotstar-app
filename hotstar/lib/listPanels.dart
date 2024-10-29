@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar/InnerPanels/continuePanel.dart';
+import 'package:hotstar/InnerPanels/fantasyPanel.dart';
+import 'package:hotstar/InnerPanels/latestRelease.dart';
 import 'package:hotstar/rowList.dart';
 
 class ListPanels extends StatefulWidget {
@@ -21,6 +23,9 @@ class _ListPanelsState extends State<ListPanels> {
             RowList(title: "Continue Watching", marspace: 10),
             ContinuePanel(),
             RowList(title: "Latest Release", marspace: 5),
+            LatestRelease(),
+            RowList(title: "Fantasy Movies", marspace: 5),
+            FantasyPanel()
           ],
         ),
       ),

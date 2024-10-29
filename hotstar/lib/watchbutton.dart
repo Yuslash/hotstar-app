@@ -27,7 +27,28 @@ class _WatchButtonState extends State<WatchButton> {
                     padding: EdgeInsets.zero,
                     constraints: const BoxConstraints(),),
                   const Padding(padding:  EdgeInsets.only(right: 15),
-                    child: Text("Watch Free", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Colors.white),),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                          Text(
+                            "Watch",
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                          ),
+                          SizedBox(width:3),
+                          Text(
+                            "Free",
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.cyan),
+                          ),
+                        ],
+                    )
                   ),
           ],
         ),

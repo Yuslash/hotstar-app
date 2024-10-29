@@ -9,12 +9,35 @@ class LatestRelease extends StatefulWidget {
 
 class _LatestReleaseState extends State<LatestRelease> {
 
-  
+  final List<String> listImage = [
+    'images/wed.jpg',
+    'images/star.jpg',
+    'images/ince.jpg',
+    'images/dark.jpeg',
+  ];
 
   @override
   Widget build(BuildContext context){
     return Container(
-
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: listImage.map((img) {
+            return Padding(padding: EdgeInsets.only(right: 5),
+              child: Container(
+                width: 130,
+                height: 160,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(2),
+                  child: Image.asset(img, fit: BoxFit.cover,),
+                ),
+              ),
+            );
+          }).toList()
+        ),
+      ),
     );
   }
 

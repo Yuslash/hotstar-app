@@ -54,7 +54,7 @@ class _ContinuePanelState extends State<ContinuePanel> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                        Text(item['title']!, style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w500),)
+                        Text(item['title']!, style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w600),)
                       ],),
                       )
                     ),

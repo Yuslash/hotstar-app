@@ -22,7 +22,8 @@ class RowList extends StatelessWidget {
           Text(title, style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 16)),
+                  fontSize: 16,
+                  )),
           IconButton(onPressed: (){}, icon: const Icon(Icons.chevron_right), iconSize: 24, color: Colors.white,)
         ],
       ),
