@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/NaviBarPage/searchPage.dart';
 import 'package:hotstar/homePage.dart';
 
 const Color _background = Color(0xFF0F1014);
@@ -17,8 +18,53 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: _background,
         body: HomePage(),
+        bottomNavigationBar: Builder(builder: (context) => Container(
+          
+          
+
+          decoration: const BoxDecoration(
         
+            border: Border(
+              top: BorderSide(color: Color(0xff98999B), width: 0.2)
+            )
+          ),
+          child: Padding(padding: EdgeInsets.all(10), child: BottomNavigationBar(
+                      type: BottomNavigationBarType.fixed,
+                      backgroundColor: Colors.transparent,
+                      selectedItemColor: Colors.white,
+                      selectedFontSize: 10,
+                      unselectedFontSize: 10,
+                      unselectedItemColor: Color(0xFF878B93),
+                      selectedLabelStyle: TextStyle(fontWeight: FontWeight.w800),
+                      onTap: (index) {
+                        if (index == 1) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SearchBarPage()));
+                        }
+                      },
+                      items: [
+                        BottomNavigationBarItem(
+                            icon: Image.asset('images/home.png',),
+                            label: "Home"),
+                        BottomNavigationBarItem(
+                            icon: Image.asset('images/search.png', ),
+                            label: "Search"),
+                        BottomNavigationBarItem(
+                            icon: Image.asset('images/ligt.png', ),
+                            label: "News & Hot"),
+                        BottomNavigationBarItem(
+                            icon: Image.asset('images/download.png', ),
+                            label: "Download"),
+                        BottomNavigationBarItem(
+                            icon: Image.asset('images/mic.png', ),
+                            label: "My Space"),
+                      ],
+                          ),
+                        ), 
+                      ),
       ),
-    );
+    ));
   }
 }
