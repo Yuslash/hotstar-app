@@ -10,6 +10,12 @@ class ContinuePanel extends StatefulWidget {
 
 class _ContinuePanelState extends State<ContinuePanel> {
 
+  final List<String> imagePath = [
+    'images/endgame.png',
+    'images/inifinty.png',
+    'images/heros.png'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,34 +24,36 @@ class _ContinuePanelState extends State<ContinuePanel> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
-        children: List.generate(4, (i) {
-          return Padding(padding: EdgeInsets.only(left: 5),
-          child: Container(
-            height: 144,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Container(
-                  width: 182,
-                  height: 100,
-                  child: DecoratedBox(decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5)),
-                      
+          children: imagePath.map((img) {
+            return Padding(padding: EdgeInsets.only(left: 5),
+              child: Container(
+                child: Column(
+                  children: [
+                    Container(
+                      width: 182,
+                      height: 100,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5),),
+                        child: Image.asset(img, fit: BoxFit.cover,),
+                      ),
                     ),
-                    child: ClipRRect(
-                      child: Image.asset('images/aven.jpeg', fit: BoxFit.cover,),
+                    Container(
+                      width: 182,
+                      height: 44,
+                      child: Padding(padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                        Text("Avengers Endgame", style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w500),)
+                      ],),
+                      )
                     ),
-                  ),
+                  ],
                 ),
-                Container(
-                  width: 182,
-                  height: 44,
-                  child: DecoratedBox(decoration: BoxDecoration(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5), bottomRight: Radius.circular(5)),color: Color(0xFF0F1014))),
-                )     
-              ],
-            ),
-          ),);
-        })
+              ),
+            );
+          }).toList()
       ),
       )
     );
