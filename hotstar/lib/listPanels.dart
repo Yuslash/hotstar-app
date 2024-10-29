@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar/InnerPanels/continuePanel.dart';
+import 'package:hotstar/rowList.dart';
 
 class ListPanels extends StatefulWidget {
   const ListPanels({super.key});
@@ -16,18 +17,10 @@ class _ListPanelsState extends State<ListPanels> {
       child: Padding(padding: EdgeInsets.symmetric(horizontal: 10), 
         child: Column(
           children: [
-            Container(
-              margin: EdgeInsets.only(top: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text("Continue Watching", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.chevron_right), color: Colors.white, iconSize: 24),
-                ],
-              ),
-            ),
+
+            RowList(title: "Continue Watching", marspace: 10),
             ContinuePanel(),
+            RowList(title: "Latest Release", marspace: 5),
           ],
         ),
       ),

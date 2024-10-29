@@ -10,12 +10,6 @@ class ContinuePanel extends StatefulWidget {
 
 class _ContinuePanelState extends State<ContinuePanel> {
 
-  final List<String> imagePath = [
-    'images/endgame.png',
-    'images/inifinty.png',
-    'images/heros.png'
-  ];
-
   final List<Map<String, String>> items = [
     {
       "title": "Avengers Endgame",
@@ -40,7 +34,7 @@ class _ContinuePanelState extends State<ContinuePanel> {
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
           children: items.map((item) {
-            return Padding(padding: EdgeInsets.only(left: 5),
+            return Padding(padding: const EdgeInsets.only(left: 5),
               child: Container(
                 child: Column(
                   children: [
@@ -48,19 +42,19 @@ class _ContinuePanelState extends State<ContinuePanel> {
                       width: 182,
                       height: 100,
                       child: ClipRRect(
-                        borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5),),
+                        borderRadius: const BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5),),
                         child: Image.asset(item['image']!, fit: BoxFit.cover,),
                       ),
                     ),
                     Container(
                       width: 182,
                       height: 44,
-                      child: Padding(padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      child: Padding(padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                        Text(item['title']!, style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w500),)
+                        Text(item['title']!, style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w500),)
                       ],),
                       )
                     ),
