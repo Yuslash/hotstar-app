@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:http/http.dart' as http;
 
-class DbPanel extends StatefulWidget {
-  const DbPanel({super.key});
+class ShortSeriesPanel extends StatefulWidget {
+  const ShortSeriesPanel({super.key});
 
   @override
-  _DbPanelState createState() => _DbPanelState();
-
+  _ShortSeriesPanelState createState() => _ShortSeriesPanelState();
 }
 
-class _DbPanelState extends State<DbPanel> {
-
+class _ShortSeriesPanelState extends State<ShortSeriesPanel> {
+  
   List<dynamic> items = [];
 
   Future<void> fetchData() async {
-    final response = await http.get(Uri.parse('http://192.168.210.18:3000/data'));
+    final response = await http.get(Uri.parse('http://192.168.210.18:3000/short'));
     setState(() {
       items = jsonDecode(response.body);
-    }); 
+    });
   }
 
   @override
@@ -34,19 +33,18 @@ class _DbPanelState extends State<DbPanel> {
         scrollDirection: Axis.horizontal,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.max,
           children: items.map((item) {
             return Padding(padding: EdgeInsets.only(right: 5),
               child: Container(
                 width: 120,
                 height: 160,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(2)),
-                  child: item['poster'] != null ? Image.network(item['poster'], fit: BoxFit.cover, errorBuilder: (context, error, stackTrace) => Icon(Icons.broken_image, color: Colors.grey,),) : Icon(Icons.broken_image, color: Colors.grey,),
+                  borderRadius: BorderRadius.circular(2),
+                  child: item['poster'] != null ? Image.network(item['poster'], fit: BoxFit.cover, errorBuilder: (context, error, stackTrace) => Icon(Icons.broken_image, color: Colors.grey,)) : Icon(Icons.broken_image, color: Colors.grey,), 
                 ),
               ),
             );
-
           }).toList(),
         ),
       ),

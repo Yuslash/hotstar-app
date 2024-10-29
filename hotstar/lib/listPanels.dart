@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hotstar/InnerPanels/continuePanel.dart';
 import 'package:hotstar/InnerPanels/dbPanel.dart';
 import 'package:hotstar/InnerPanels/fantasyPanel.dart';
+import 'package:hotstar/InnerPanels/fantasySeries.dart';
 import 'package:hotstar/InnerPanels/latestRelease.dart';
+import 'package:hotstar/InnerPanels/shortSeriesPane.dart';
 import 'package:hotstar/rowList.dart';
 
 class ListPanels extends StatefulWidget {
@@ -29,6 +31,10 @@ class _ListPanelsState extends State<ListPanels> {
             FantasyPanel(),
             RowList(title: "Netflix Movies", marspace: 5),
             DbPanel(),
+            RowList(title: "Short Series", marspace: 5),
+            ShortSeriesPanel(),
+            RowList(title: "Fantasy Movies", marspace: 5),
+            FantasySeries(),
           ],
         ),
       ),
