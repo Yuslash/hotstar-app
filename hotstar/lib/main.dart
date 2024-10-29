@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -11,43 +10,50 @@ class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp>
 {
-  Map<String, dynamic> _responseData = {};
+  List<dynamic> _responseData = [];
 
   Future<void> fetchData() async {
-    final response = await http.get(Uri.parse('http://192.168.210.18:3000/api'));
+    final response = await http.get(Uri.parse('http://192.168.210.18:3000/data'));
+    setState(() {
     _responseData = jsonDecode(response.body);
-    setState(() {});
+    });
 
   }
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   fetchData();
-  // }
-
-  void fetchingButton() {
+  @override
+  void initState() {
+    super.initState();
     fetchData();
   }
+
+  // void fetchingButton() {
+  //   fetchData();
+  // }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Data from MongoDB"),
+        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(_responseData['message'] ?? 'Loading..'),
+              Text(_responseData.isNotEmpty ? _responseData[1]['title'] ?? 'Not Title Avaiable' : 'Loading...'),
               ElevatedButton(onPressed: (){
                 fetchData();
-              }, child: Text('Fetch Data'))
+              }, child: const Text('Fetch Data')),
+              SizedBox(height: 10),
+              Image.network(_responseData.isNotEmpty ? _responseData[5]['poster'] ?? 'No Image Found': 'Loading Image...')
             ],
           ),
         ),
