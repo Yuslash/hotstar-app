@@ -16,6 +16,21 @@ class _ContinuePanelState extends State<ContinuePanel> {
     'images/heros.png'
   ];
 
+  final List<Map<String, String>> items = [
+    {
+      "title": "Avengers Endgame",
+      "image": "images/endgame.png",
+    },
+    {
+      "title": "Avengers Inifinty",
+      "image": "images/inifinty.png",
+    },
+    {
+      "title" : "Movie Hero",
+      "image" : "images/hary.jpeg"
+    }
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,7 +39,7 @@ class _ContinuePanelState extends State<ContinuePanel> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
-          children: imagePath.map((img) {
+          children: items.map((item) {
             return Padding(padding: EdgeInsets.only(left: 5),
               child: Container(
                 child: Column(
@@ -34,7 +49,7 @@ class _ContinuePanelState extends State<ContinuePanel> {
                       height: 100,
                       child: ClipRRect(
                         borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5),),
-                        child: Image.asset(img, fit: BoxFit.cover,),
+                        child: Image.asset(item['image']!, fit: BoxFit.cover,),
                       ),
                     ),
                     Container(
@@ -45,7 +60,7 @@ class _ContinuePanelState extends State<ContinuePanel> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                        Text("Avengers Endgame", style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w500),)
+                        Text(item['title']!, style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w500),)
                       ],),
                       )
                     ),
