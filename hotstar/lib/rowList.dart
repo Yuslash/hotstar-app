@@ -20,7 +20,7 @@ class RowList extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(title, style: const TextStyle(
-                  color: Colors.white,
+                  color: Color(0xFFCACED7),
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                   )),

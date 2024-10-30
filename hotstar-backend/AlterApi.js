@@ -1,6 +1,6 @@
 export default function AlterApi(app, fetch, client) {
 
-    app.get('/rapid', async (req, res) => {
+    app.get('/rapidapi', async (req, res) => {
 
         const database = await client.db('sample_mflix')
         const collection = await database.collection('ottlist')
