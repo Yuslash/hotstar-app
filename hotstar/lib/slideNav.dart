@@ -14,7 +14,7 @@ class _SlideNavState extends State<SlideNav> {
   Widget build(BuildContext context) {
     return Container(
         margin: const EdgeInsets.only(top: 35),
-        width: double.infinity,
+        width: 393,
         height: 317,
         color: Colors.grey,
         child: SingleChildScrollView(
