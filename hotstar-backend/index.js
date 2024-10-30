@@ -8,6 +8,7 @@ import DramaShowListApi from './DramaShowListApi.js'
 import SpcialMovies from './SpicalMovies.js'
 import AlterApi from './AlterApi.js'
 import fetch from 'node-fetch'
+import AnimationListApi from './AnimationListApi.js'
 dotenv.config()
 
 
@@ -30,7 +31,8 @@ ShortSeriesApi(app, client)
 FantasyListApi(app, client)
 DramaShowListApi(app, client)
 SpcialMovies(app, client)
-AlterApi(app, fetch)
+AlterApi(app, fetch, client)
+AnimationListApi(app, client)
 
 app.listen(port, '0.0.0.0', () => {
     console.log(`Server is Running at http://192.168.210.18:${port}`)

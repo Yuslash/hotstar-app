@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/AlterApi/animationList.dart';
 import 'package:hotstar/InnerPanels/continuePanel.dart';
 import 'package:hotstar/InnerPanels/dbPanel.dart';
 import 'package:hotstar/InnerPanels/dramaShow.dart';
@@ -41,6 +42,8 @@ class _ListPanelsState extends State<ListPanels> {
             DramaShow(),
             RowList(title: "Special Movies", marspace: 5),
             SpecialMovies(),
+            RowList(title: "Animations", marspace: 5),
+            AnimationList(),
           ],
         ),
       ),

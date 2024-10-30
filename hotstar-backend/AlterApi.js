@@ -1,6 +1,10 @@
-export default function AlterApi(app, fetch) {
+export default function AlterApi(app, fetch, client) {
 
     app.get('/rapid', async (req, res) => {
+
+        const database = await client.db('sample_mflix')
+        const collection = await database.collection('ottlist')
+
         const url = 'https://ott-details.p.rapidapi.com/advancedsearch?start_year=1970&end_year=2020&min_imdb=6&max_imdb=7.8&genre=action&language=english&type=movie&sort=latest&page=1';
         const options = {
             method: 'GET',
@@ -13,7 +17,8 @@ export default function AlterApi(app, fetch) {
         try {
             const response = await fetch(url, options);
             const result = await response.json();
-            res.json(result)
+            await collection.insertMany(result.results)
+            res.json(result.results)
         } catch (error) {
             console.error(error);
         }
