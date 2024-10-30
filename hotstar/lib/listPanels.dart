@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar/AlterApi/animationList.dart';
+import 'package:hotstar/IndusSelection/studioSelect.dart';
+import 'package:hotstar/IndusSelection/twoTowSelect.dart';
 import 'package:hotstar/InnerPanels/continuePanel.dart';
 import 'package:hotstar/InnerPanels/dbPanel.dart';
 import 'package:hotstar/InnerPanels/dramaShow.dart';
@@ -32,18 +34,23 @@ class _ListPanelsState extends State<ListPanels> {
             LatestRelease(),
             RowList(title: "Fantasy Movies", marspace: 5),
             FantasyPanel(),
-            // RowList(title: "Netflix Movies", marspace: 10),
-            // DbPanel(),
-            // RowList(title: "Short Series", marspace: 5),
-            // ShortSeriesPanel(),
-            // RowList(title: "Fantasy Movies", marspace: 5),
-            // FantasySeries(),
-            // RowList(title: "Drama Movies", marspace: 10),
-            // DramaShow(),
-            // RowList(title: "Special Movies", marspace: 5),
-            // SpecialMovies(),
-            // RowList(title: "Animations", marspace: 5),
-            // AnimationList(),
+            RowList(title: "Netflix Movies", marspace: 10),
+            DbPanel(),
+            RowList(title: "Short Series", marspace: 5),
+            ShortSeriesPanel(),
+            RowList(title: "Fantasy Movies", marspace: 5),
+            FantasySeries(),
+            RowList(title: "Drama Movies", marspace: 10),
+            DramaShow(),
+            RowList(title: "Special Movies", marspace: 5),
+            SpecialMovies(),
+            RowList(title: "Animations", marspace: 5),
+            AnimationList(),
+            SizedBox(height: 20),
+            StudioSelect(),
+            SizedBox(height: 5),
+            TwoTowSelect(),
+            
           ],
         ),
       ),

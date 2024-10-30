@@ -31,7 +31,7 @@ ShortSeriesApi(app, client)
 FantasyListApi(app, client)
 DramaShowListApi(app, client)
 SpcialMovies(app, client)
-AlterApi(app, fetch, client)
+// AlterApi(app, fetch, client)
 AnimationListApi(app, client)
 
 app.listen(port, '0.0.0.0', () => {
