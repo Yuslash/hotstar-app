@@ -4,6 +4,8 @@ import dotenv from 'dotenv'
 import CheckDatabase from './CheckDatabase.js'
 import ShortSeriesApi from './ShortSeriesApi.js'
 import FantasyListApi from './FantasyListApi.js'
+import DramaShowListApi from './DramaShowListApi.js'
+import SpcialMovies from './SpicalMovies.js'
 dotenv.config()
 
 
@@ -24,6 +26,8 @@ app.get('/api', (req, res) => {
 CheckDatabase(app, client)
 ShortSeriesApi(app, client)
 FantasyListApi(app, client)
+DramaShowListApi(app, client)
+SpcialMovies(app, client)
 
 app.listen(port, '0.0.0.0', () => {
     console.log(`Server is Running at http://192.168.210.18:${port}`)
