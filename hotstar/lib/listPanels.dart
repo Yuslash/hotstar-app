@@ -44,13 +44,13 @@ class _ListPanelsState extends State<ListPanels> {
             DramaShow(),
             RowList(title: "Special Movies", marspace: 5),
             SpecialMovies(),
-            RowList(title: "Animations", marspace: 5),
+            RowList(title: "Animations Movies", marspace: 5),
             AnimationList(),
             SizedBox(height: 20),
             StudioSelect(),
             SizedBox(height: 5),
             TwoTowSelect(),
-            
+
           ],
         ),
       ),
