@@ -39,7 +39,7 @@ class _DbPanelState extends State<DbPanel> {
             return Padding(padding: EdgeInsets.only(right: 5),
               child: Container(
                 width: 120,
-                height: 160,
+                height: 178,
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(2)),
                   child: item['poster'] != null ? Image.network(item['poster'], fit: BoxFit.cover, errorBuilder: (context, error, stackTrace) => Icon(Icons.broken_image, color: Colors.grey,),) : Icon(Icons.broken_image, color: Colors.grey,),

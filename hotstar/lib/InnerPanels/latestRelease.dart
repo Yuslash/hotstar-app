@@ -27,8 +27,8 @@ class _LatestReleaseState extends State<LatestRelease> {
           children: listImage.map((img) {
             return Padding(padding: EdgeInsets.only(right: 5),
               child: Container(
-                width: 130,
-                height: 160,
+                width: 120,
+                height: 178,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(2),
                   child: Image.asset(img, fit: BoxFit.cover,),

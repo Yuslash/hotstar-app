@@ -39,9 +39,9 @@ class _DramaShowState extends State<DramaShow> {
             return Padding(padding: EdgeInsets.only(right: 5),
             child: Container(
               width: 120,
-              height: 160,
+              height: 178,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(2),
+                borderRadius: BorderRadius.circular(4),
                 child: item['poster'] != null ? Image.network(item['poster'], fit: BoxFit.cover, errorBuilder: (context,  error, stackTrace) => Icon(Icons.broken_image, color: Colors.grey,) ,) : Icon(Icons.broken_image, color: Colors.grey,),
               ),
             ),
