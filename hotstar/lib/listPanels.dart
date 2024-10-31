@@ -10,6 +10,9 @@ import 'package:hotstar/InnerPanels/fantasySeries.dart';
 import 'package:hotstar/InnerPanels/latestRelease.dart';
 import 'package:hotstar/InnerPanels/shortSeriesPane.dart';
 import 'package:hotstar/InnerPanels/specialMovies.dart';
+import 'package:hotstar/Popular%20Genres/genresPanel.dart';
+import 'package:hotstar/Popular%20Langauages/languagePanel.dart';
+import 'package:hotstar/Popular%20Langauages/popularLanguage.dart';
 import 'package:hotstar/rowList.dart';
 
 class ListPanels extends StatefulWidget {
@@ -18,6 +21,9 @@ class ListPanels extends StatefulWidget {
   @override
   _ListPanelsState createState() => _ListPanelsState();
 }
+
+// 0xFFA3E3FF
+// 0xFF021D47
 
 class _ListPanelsState extends State<ListPanels> {
 
@@ -52,6 +58,11 @@ class _ListPanelsState extends State<ListPanels> {
             StudioSelect(),
             SizedBox(height: 5),
             TwoTowSelect(),
+            RowList(title: "Popular Languages", marspace: 5),
+            LanguagePanel(),
+            RowList(title: "Popular Genres", marspace: 10),
+            GenresPanel(),
+            SizedBox(height: 20)
 
           ],
         ),
