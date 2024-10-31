@@ -3,7 +3,12 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ShortSeriesPanel extends StatefulWidget {
-  const ShortSeriesPanel({super.key});
+  const ShortSeriesPanel({
+    super.key,
+    required this.port,
+    });
+
+    final String port;
 
   @override
   _ShortSeriesPanelState createState() => _ShortSeriesPanelState();
@@ -14,7 +19,7 @@ class _ShortSeriesPanelState extends State<ShortSeriesPanel> {
   List<dynamic> items = [];
 
   Future<void> fetchData() async {
-    final response = await http.get(Uri.parse('http://192.168.210.18:3000/short'));
+    final response = await http.get(Uri.parse('http://192.168.${widget.port}:3000/short'));
     setState(() {
       items = jsonDecode(response.body);
     });

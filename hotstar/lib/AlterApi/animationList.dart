@@ -3,7 +3,12 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class AnimationList extends StatefulWidget {
-  const AnimationList({super.key});
+  const AnimationList({
+    super.key,
+    required this.port,
+    });
+
+    final String port;
 
   @override
   _AnimationListState createState() => _AnimationListState();
@@ -15,7 +20,7 @@ class _AnimationListState extends State<AnimationList> {
 
   Future<void> fetchData() async {
 
-    final response = await http.get(Uri.parse('http://192.168.210.18:3000/animation'));
+    final response = await http.get(Uri.parse('http://192.168.${widget.port}:3000/animation'));
     setState(() {
       items = jsonDecode(response.body);
     });

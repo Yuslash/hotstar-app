@@ -3,7 +3,12 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class DbPanel extends StatefulWidget {
-  const DbPanel({super.key});
+  const DbPanel({
+    super.key,
+    required this.port,
+    });
+
+    final String port;
 
   @override
   _DbPanelState createState() => _DbPanelState();
@@ -15,7 +20,7 @@ class _DbPanelState extends State<DbPanel> {
   List<dynamic> items = [];
 
   Future<void> fetchData() async {
-    final response = await http.get(Uri.parse('http://192.168.210.18:3000/data'));
+    final response = await http.get(Uri.parse('http://192.168.${widget.port}:3000/data'));
     setState(() {
       items = jsonDecode(response.body);
     }); 

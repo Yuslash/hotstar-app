@@ -3,7 +3,12 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class FantasySeries extends StatefulWidget {
-  const FantasySeries({super.key});
+  const FantasySeries({
+    super.key,
+    required this.port,
+    });
+
+    final String port;
 
   @override
   _FantasySeriesState createState() => _FantasySeriesState();
@@ -16,7 +21,7 @@ class _FantasySeriesState extends State<FantasySeries> {
 
   Future<void> fetchData() async {
 
-    final response = await http.get(Uri.parse('http://192.168.210.18:3000/fantasy'));
+    final response = await http.get(Uri.parse('http://192.168.${widget.port}:3000/fantasy'));
 
     setState(() {
       items = jsonDecode(response.body);

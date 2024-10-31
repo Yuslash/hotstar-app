@@ -3,7 +3,12 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class DramaShow extends StatefulWidget {
-  const DramaShow({super.key});
+  const DramaShow({
+    super.key,
+    required this.port,
+    });
+
+    final String port;
 
   @override
   _DramaShowState createState() => _DramaShowState();
@@ -15,7 +20,7 @@ class _DramaShowState extends State<DramaShow> {
 
   Future<void> fetchData() async {
 
-    final response = await http.get(Uri.parse('http://192.168.210.18:3000/drama'));
+    final response = await http.get(Uri.parse('http://192.168.${widget.port}:3000/drama'));
     setState(() {
       items = jsonDecode(response.body);
     });

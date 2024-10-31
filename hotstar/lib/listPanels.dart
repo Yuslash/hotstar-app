@@ -21,6 +21,8 @@ class ListPanels extends StatefulWidget {
 
 class _ListPanelsState extends State<ListPanels> {
 
+  String portno = "0.18";
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,17 +37,17 @@ class _ListPanelsState extends State<ListPanels> {
             RowList(title: "Fantasy Movies", marspace: 5),
             FantasyPanel(),
             RowList(title: "Netflix Movies", marspace: 10),
-            DbPanel(),
+            DbPanel(port: portno,),
             RowList(title: "Short Series", marspace: 5),
-            ShortSeriesPanel(),
+            ShortSeriesPanel(port: portno,),
             RowList(title: "Fantasy Movies", marspace: 5),
-            FantasySeries(),
+            FantasySeries(port: portno,),
             RowList(title: "Drama Movies", marspace: 10),
-            DramaShow(),
+            DramaShow(port: portno,),
             RowList(title: "Special Movies", marspace: 5),
-            SpecialMovies(),
+            SpecialMovies(port: portno,),
             RowList(title: "Animations Movies", marspace: 5),
-            AnimationList(),
+            AnimationList(port: portno,),
             SizedBox(height: 20),
             StudioSelect(),
             SizedBox(height: 5),
