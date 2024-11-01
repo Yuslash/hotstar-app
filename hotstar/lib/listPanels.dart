@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/AlterApi/ActionSection.dart';
 import 'package:hotstar/AlterApi/animationList.dart';
+import 'package:hotstar/AlterApi/dynamicSection.dart';
+import 'package:hotstar/AlterApi/horrorSection.dart';
 import 'package:hotstar/IndusSelection/studioSelect.dart';
 import 'package:hotstar/IndusSelection/twoTowSelect.dart';
 import 'package:hotstar/InnerPanels/continuePanel.dart';
@@ -62,7 +65,12 @@ class _ListPanelsState extends State<ListPanels> {
             LanguagePanel(),
             RowList(title: "Popular Genres", marspace: 10),
             GenresPanel(),
-            SizedBox(height: 20)
+            RowList(title: "Horror Section", marspace: 10),
+            HorrorSection(ipno: portno, endpoint: 'horror',),
+            RowList(title: "Mystery Series", marspace: 5),
+            DynamicSection(ipno: portno, endpoint: 'mystery'),
+            RowList(title: "Action Movies", marspace: 5),
+            ActionSection(ipno: portno, endpoint: 'action'),
 
           ],
         ),

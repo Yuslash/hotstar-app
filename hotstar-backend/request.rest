@@ -1,1 +1,1 @@
-GET http://192.168.210.18:3000/rapidapi
+GET http://192.168.0.18:3000/action
