@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
             SlideNav(),
             WatchButton(),
             ListPanels(),
-            AdvertPanel()
+            AdvertPanel(title: "Disney+ Hotstar", subTitle: "Diwali BlockBusterMovies!", image: "images/banner.jpeg",),
           ],
         ),
       ),

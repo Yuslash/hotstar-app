@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 
 class AdvertPanel extends StatefulWidget {
   const AdvertPanel({
-  super.key
+  super.key,
+  required this.title,
+  required this.subTitle,
+  required this.image,
   });
+
+  final String title;
+  final String subTitle;
+  final String image;
 
   @override
   _AdvertPanelState createState() => _AdvertPanelState();
@@ -22,7 +29,7 @@ class _AdvertPanelState extends State<AdvertPanel> {
             ClipRRect(
               borderRadius: BorderRadius.circular(4),
               child: Image.asset(
-                'images/banner.jpeg'
+                widget.image
               ),
             ),
             Container(
@@ -54,10 +61,10 @@ class _AdvertPanelState extends State<AdvertPanel> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
-                                "Disney+ Hotstar",
+                                widget.title,
                                 style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w600),
                               ),
-                              Text("Diwali BlockBusterMovies!", 
+                              Text(widget.subTitle, 
                                 style: TextStyle(color: Color(0xff858A96), fontSize: 8, fontWeight: FontWeight.w600),
                               )
                             ],
