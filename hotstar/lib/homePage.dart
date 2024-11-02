@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar/AdvertPanel/AdvertPanel.dart';
 import 'package:hotstar/SectorColumn/SecondSectorColumn.dart';
+import 'package:hotstar/SectorColumn/fifthLangGenreSector.dart';
+import 'package:hotstar/SectorColumn/fourthStudioSector.dart';
+import 'package:hotstar/SectorColumn/sixthSectorColumn.dart';
 import 'package:hotstar/SectorColumn/thirdSectorColumn.dart';
 import 'package:hotstar/listPanels.dart';
 import 'package:hotstar/slideNav.dart';
@@ -22,6 +25,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
+  String noip = "0.18";
+
   @override
   Widget build(BuildContext context) {
     return SizedBox.expand(
@@ -29,6 +34,7 @@ class _HomePageState extends State<HomePage> {
       child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           children: [
             SlideNav(),
@@ -38,7 +44,10 @@ class _HomePageState extends State<HomePage> {
             SecondSectorColumn(),
             AdvertPanel(title: "Hotstar+ Specials", subTitle: "Welcome to HotstarSpecials", image: "images/banner.jpeg"),
             ThirdSectorColumn(),
-            AdvertPanel(title: "Animation DenMark", subTitle: "Let the crack begin!", image: "images/banner.jpeg")
+            AdvertPanel(title: "Animation DenMark", subTitle: "Let the crack begin!", image: "images/banner.jpeg"),
+            FourthStudioSector(),
+            FifthLangGenreSector(),
+            SixthSectorColumn(ipno: noip)
           ],
         ),
       ),

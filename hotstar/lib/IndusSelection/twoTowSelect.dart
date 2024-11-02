@@ -12,19 +12,19 @@ class _TwoTowSelectState extends State<TwoTowSelect> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          StudioPanel(image: 'images/starwars.png', crosSize: 70, heightSize: 70,),
-          SizedBox(width: 4),
-          StudioPanel(image: 'images/whitenation.png', crosSize: 73, heightSize: 21,),
-          SizedBox(width: 4),
-          StudioPanel(image: 'images/jio.png', crosSize: 98, heightSize: 55,),
-          SizedBox(width: 4),
-
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(left: 3),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            StudioPanel(image: 'images/starwars.png', crosSize: 70, heightSize: 70,),
+            SizedBox(width: 4),
+            StudioPanel(image: 'images/whitenation.png', crosSize: 73, heightSize: 21,),
+            SizedBox(width: 4),
+            StudioPanel(image: 'images/jio.png', crosSize: 98, heightSize: 55,),
+            SizedBox(width: 4),
+          ],
+        ),
       ),
     );
   }
