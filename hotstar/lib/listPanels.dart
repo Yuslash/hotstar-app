@@ -25,9 +25,6 @@ class ListPanels extends StatefulWidget {
   _ListPanelsState createState() => _ListPanelsState();
 }
 
-// 0xFFA3E3FF
-// 0xFF021D47
-
 class _ListPanelsState extends State<ListPanels> {
 
   String portno = "0.18";

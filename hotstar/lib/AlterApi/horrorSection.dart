@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/NaviBarPage/searchPage.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -47,12 +48,17 @@ class _HorrorSectionState extends State<HorrorSection> {
           mainAxisSize: MainAxisSize.min,
           children: items.map((item) {
             return Padding(padding: EdgeInsets.only(right: 5),
-              child: Container(
-                width: 120,
-                height: 178,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(3),
-                  child: item['imageurl'][0] != null ? Image.network(item['imageurl'][0], fit: BoxFit.cover, errorBuilder: (context, error, stackTrace) => Icon(Icons.broken_image, color: Colors.grey,),) : Icon(Icons.broken_image, color: Colors.grey,),
+              child: GestureDetector(
+                  onTap: (){
+                    print("sibikrishna is ");
+                },
+                child: Container(
+                  width: 120,
+                  height: 178,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(3),
+                    child: item['imageurl'][0] != null ? Image.network(item['imageurl'][0], fit: BoxFit.cover, errorBuilder: (context, error, stackTrace) => Icon(Icons.broken_image, color: Colors.grey,),) : Icon(Icons.broken_image, color: Colors.grey,),
+                  ),
                 ),
               ),
             );
