@@ -14,6 +14,9 @@ class _StudioSelectState extends State<StudioSelect> {
   Widget build(BuildContext context) {
     return Container(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           StudioPanel(image: 'images/disne.png', crosSize: 70, heightSize: 30),
           SizedBox(width: 4),

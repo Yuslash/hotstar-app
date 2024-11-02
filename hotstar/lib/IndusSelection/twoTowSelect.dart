@@ -13,6 +13,9 @@ class _TwoTowSelectState extends State<TwoTowSelect> {
   Widget build(BuildContext context) {
     return Container(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           StudioPanel(image: 'images/starwars.png', crosSize: 70, heightSize: 70,),
           SizedBox(width: 4),

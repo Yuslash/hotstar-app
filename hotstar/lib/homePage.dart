@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar/AdvertPanel/AdvertPanel.dart';
+import 'package:hotstar/SectorColumn/SecondSectorColumn.dart';
+import 'package:hotstar/SectorColumn/thirdSectorColumn.dart';
 import 'package:hotstar/listPanels.dart';
 import 'package:hotstar/slideNav.dart';
 import 'package:hotstar/watchbutton.dart';
@@ -33,6 +35,10 @@ class _HomePageState extends State<HomePage> {
             WatchButton(),
             ListPanels(),
             AdvertPanel(title: "Disney+ Hotstar", subTitle: "Diwali BlockBusterMovies!", image: "images/banner.jpeg",),
+            SecondSectorColumn(),
+            AdvertPanel(title: "Hotstar+ Specials", subTitle: "Welcome to HotstarSpecials", image: "images/banner.jpeg"),
+            ThirdSectorColumn(),
+            AdvertPanel(title: "Animation DenMark", subTitle: "Let the crack begin!", image: "images/banner.jpeg")
           ],
         ),
       ),

@@ -6,16 +6,11 @@ import 'package:hotstar/AlterApi/horrorSection.dart';
 import 'package:hotstar/IndusSelection/studioSelect.dart';
 import 'package:hotstar/IndusSelection/twoTowSelect.dart';
 import 'package:hotstar/InnerPanels/continuePanel.dart';
-import 'package:hotstar/InnerPanels/dbPanel.dart';
-import 'package:hotstar/InnerPanels/dramaShow.dart';
 import 'package:hotstar/InnerPanels/fantasyPanel.dart';
-import 'package:hotstar/InnerPanels/fantasySeries.dart';
 import 'package:hotstar/InnerPanels/latestRelease.dart';
-import 'package:hotstar/InnerPanels/shortSeriesPane.dart';
 import 'package:hotstar/InnerPanels/specialMovies.dart';
 import 'package:hotstar/Popular%20Genres/genresPanel.dart';
 import 'package:hotstar/Popular%20Langauages/languagePanel.dart';
-import 'package:hotstar/Popular%20Langauages/popularLanguage.dart';
 import 'package:hotstar/rowList.dart';
 
 class ListPanels extends StatefulWidget {
@@ -42,33 +37,8 @@ class _ListPanelsState extends State<ListPanels> {
             LatestRelease(),
             RowList(title: "Fantasy Movies", marspace: 5),
             FantasyPanel(),
-            RowList(title: "Netflix Movies", marspace: 10),
-            DbPanel(port: portno,),
-            RowList(title: "Short Series", marspace: 5),
-            ShortSeriesPanel(port: portno,),
-            RowList(title: "Fantasy Movies", marspace: 5),
-            FantasySeries(port: portno,),
-            RowList(title: "Drama Movies", marspace: 10),
-            DramaShow(port: portno,),
-            RowList(title: "Special Movies", marspace: 5),
-            SpecialMovies(port: portno,),
             RowList(title: "Animations Movies", marspace: 5),
             AnimationList(port: portno,),
-            SizedBox(height: 20),
-            StudioSelect(),
-            SizedBox(height: 5),
-            TwoTowSelect(),
-            RowList(title: "Popular Languages", marspace: 5),
-            LanguagePanel(),
-            RowList(title: "Popular Genres", marspace: 10),
-            GenresPanel(),
-            RowList(title: "Horror Section", marspace: 10),
-            HorrorSection(ipno: portno, endpoint: 'horror',),
-            RowList(title: "Mystery Series", marspace: 5),
-            DynamicSection(ipno: portno, endpoint: 'mystery'),
-            RowList(title: "Action Movies", marspace: 5),
-            ActionSection(ipno: portno, endpoint: 'action'),
-
           ],
         ),
       ),
