@@ -64,6 +64,7 @@ class _AdvertPanelState extends State<AdvertPanel> {
                                 widget.title,
                                 style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w600),
                               ),
+                              SizedBox(height: 2),
                               Text(widget.subTitle, 
                                 style: TextStyle(color: Color(0xff858A96), fontSize: 8, fontWeight: FontWeight.w600),
                               )

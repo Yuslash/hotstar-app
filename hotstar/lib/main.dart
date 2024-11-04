@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: _background,
-        body: DetailPage(),
+        body: HomePage(),
         bottomNavigationBar: Builder(builder: (context) => Container(
           
           decoration: const BoxDecoration(

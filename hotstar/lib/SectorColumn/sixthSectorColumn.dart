@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/AdvertPanel/AdvertPanel.dart';
 import 'package:hotstar/AlterApi/ActionSection.dart';
 import 'package:hotstar/AlterApi/dynamicSection.dart';
 import 'package:hotstar/AlterApi/horrorSection.dart';
@@ -29,7 +30,8 @@ class _SixthSectorColumnState extends State<SixthSectorColumn> {
             RowList(title: "Mystery Series", marspace: 5),
             DynamicSection(ipno: widget.ipno, endpoint: "mystery"),
             RowList(title: "Action Movies", marspace: 5),
-            ActionSection(ipno: widget.ipno, endpoint: "action")
+            ActionSection(ipno: widget.ipno, endpoint: "action"),
+            AdvertPanel(title: "Watch This Shit Opennheimer", subTitle: "An Christepher Gratest film", image: "images/openbanner.jpg")
             ],
         ),
       ),
