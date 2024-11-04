@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/DetailScreen/detailPage.dart';
 import 'package:hotstar/NaviBarPage/downloadPage.dart';
 import 'package:hotstar/NaviBarPage/newsPage.dart';
 import 'package:hotstar/NaviBarPage/profilePage.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: _background,
-        body: HomePage(),
+        body: DetailPage(),
         bottomNavigationBar: Builder(builder: (context) => Container(
           
           decoration: const BoxDecoration(
