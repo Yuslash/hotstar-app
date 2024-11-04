@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: _background,
-        body: HomePage(),
+        body: DetailPage(),
         bottomNavigationBar: Builder(builder: (context) => Container(
           
           decoration: const BoxDecoration(
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
                       selectedFontSize: 10,
                       unselectedFontSize: 10,
                       unselectedItemColor: Color(0xFF878B93),
-                      selectedLabelStyle: TextStyle(fontWeight: FontWeight.w800),
+                      selectedLabelStyle: TextStyle(fontWeight: FontWeight.w800, height: 2.3),
                       onTap: (index) {
                         if (index == 1) {
                           Navigator.push(
@@ -59,19 +59,19 @@ class MyApp extends StatelessWidget {
                       },
                       items: [
                         BottomNavigationBarItem(
-                            icon: Image.asset('images/home.png', fit: BoxFit.contain,),
+                            icon: Image.asset('images/home.png', fit: BoxFit.cover, width: 22, height: 22,),
                             label: "Home"),
-                        BottomNavigationBarItem(
-                            icon: Image.asset('images/search.png',fit: BoxFit.contain, ),
+                        const BottomNavigationBarItem(
+                            icon: Icon(Icons.screen_search_desktop_rounded),
                             label: "Search"),
-                        BottomNavigationBarItem(
-                            icon: Image.asset('images/ligt.png',fit: BoxFit.contain, ),
+                        const BottomNavigationBarItem(
+                            icon: Icon(Icons.flash_on_rounded),
                             label: "News & Hot"),
-                        BottomNavigationBarItem(
-                            icon: Image.asset('images/download.png',fit: BoxFit.contain, ),
+                        const BottomNavigationBarItem(
+                            icon: Icon(Icons.downloading_sharp),
                             label: "Download"),
-                        BottomNavigationBarItem(
-                            icon: Image.asset('images/mic.png',fit: BoxFit.contain, ),
+                            BottomNavigationBarItem(
+                            icon: Image.asset('images/mic.png',fit: BoxFit.cover, width: 22, height: 22, ),
                             label: "My Space"),
                       ],
                           ),

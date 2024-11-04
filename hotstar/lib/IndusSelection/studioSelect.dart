@@ -13,7 +13,6 @@ class _StudioSelectState extends State<StudioSelect> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // color: Colors.red,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
