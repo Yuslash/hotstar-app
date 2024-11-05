@@ -21,7 +21,7 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF0F1014),
-      body: Padding(padding: const EdgeInsets.symmetric(vertical: 35, horizontal: 10),
+      body: Padding(padding: const EdgeInsets.only(top: 35, left: 10, right: 10,),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -34,6 +34,7 @@ class _DetailPageState extends State<DetailPage> {
               AboutDescription(),
               Options(),
               Morelike(),
+              SizedBox(height: 20),
             ],
           ),
         ),
