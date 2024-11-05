@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar/DetailScreen/overview.dart';
 import 'package:hotstar/DetailScreen/poster.dart';
+import 'package:hotstar/DetailScreen/sectionGenre.dart';
 import 'package:hotstar/DetailScreen/titleTran.dart';
 import 'package:hotstar/DetailScreen/watchNowButton.dart';
 
@@ -26,7 +27,7 @@ class _DetailPageState extends State<DetailPage> {
               Overview(),
               SizedBox(height: 10),
               WatchNowButton(),
-              
+              SectionGenre(),
             ],
           ),
         ),
