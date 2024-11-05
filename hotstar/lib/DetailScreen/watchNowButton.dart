@@ -13,7 +13,7 @@ class _WatchNowButtonState extends State<WatchNowButton> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 10),
-      height: 55,
+      height: 50,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(6), color: Color(0xFFE1E6F2)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
