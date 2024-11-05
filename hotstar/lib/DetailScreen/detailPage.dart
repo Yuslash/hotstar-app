@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar/DetailScreen/aboutDescription.dart';
+import 'package:hotstar/DetailScreen/morelike.dart';
+import 'package:hotstar/DetailScreen/options.dart';
 import 'package:hotstar/DetailScreen/overview.dart';
 import 'package:hotstar/DetailScreen/poster.dart';
 import 'package:hotstar/DetailScreen/sectionGenre.dart';
@@ -30,6 +32,8 @@ class _DetailPageState extends State<DetailPage> {
               WatchNowButton(),
               SectionGenre(),
               AboutDescription(),
+              Options(),
+              Morelike(),
             ],
           ),
         ),
