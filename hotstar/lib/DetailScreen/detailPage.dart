@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/DetailScreen/overview.dart';
+import 'package:hotstar/DetailScreen/poster.dart';
+import 'package:hotstar/DetailScreen/titleTran.dart';
+import 'package:hotstar/DetailScreen/watchNowButton.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -13,8 +17,19 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF0F1014),
-      body: Center(
-        child: const Text("Welcome to Detail Page", style: TextStyle(color: Colors.white),),
+      body: Padding(padding: const EdgeInsets.symmetric(vertical: 35, horizontal: 10),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Poster(),
+              TitleTran(),
+              Overview(),
+              SizedBox(height: 10),
+              WatchNowButton(),
+              
+            ],
+          ),
+        ),
       ),
     );
   }
