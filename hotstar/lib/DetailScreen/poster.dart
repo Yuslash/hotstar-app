@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Poster extends StatefulWidget {
-  const Poster({super.key});
+  const Poster({
+    super.key,
+    required this.image,
+    });
+
+    final String image;
 
   _PosterState createState() => _PosterState();
 
@@ -16,7 +21,7 @@ class _PosterState extends State<Poster> {
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
       clipBehavior: Clip.antiAlias,
       child: ClipRRect(
-        child: Image.asset("images/bramposte.jpg", fit: BoxFit.cover,),
+        child: Image.asset(widget.image, fit: BoxFit.cover,),
       ),
       );
   }

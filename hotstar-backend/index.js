@@ -7,10 +7,10 @@ import FantasyListApi from './FantasyListApi.js'
 import DramaShowListApi from './DramaShowListApi.js'
 import SpcialMovies from './SpicalMovies.js'
 import AlterApi from './AlterApi.js'
-import fetch from 'node-fetch'
 import AnimationListApi from './AnimationListApi.js'
 import HorrorSection from './HorroSection.js'
 import MysterySeries from './MysterySeries.js'
+import ActualReferenceData from './ActualReferenceData.js'
 dotenv.config()
 
 
@@ -38,6 +38,7 @@ AnimationListApi(app, client)
 HorrorSection(app, client)
 MysterySeries(app, client, 'Mystery', 'mystery')
 MysterySeries(app, client, 'Action', 'action')
+ActualReferenceData(app, client)
 
 app.listen(port, '0.0.0.0', () => {
     console.log(`Server is Running at http://192.168.18.18:${port}`)

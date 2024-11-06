@@ -19,7 +19,7 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> { 
     int currentIndex = 0;
 
     final List<Widget> _pages = [
@@ -28,16 +28,22 @@ class _MyAppState extends State<MyApp> {
       SearchBarPage(),
       NewsPage(),
       DownloadPage(),
-      ProfilePage()
+      ProfilePage(),
     ];
 
   @override
   Widget build(BuildContext context) {
+
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
+    print("screen width and height size is: $screenWidth, $screenHeight");
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: _background,
-        body: _pages[currentIndex],
+        body: DetailPage(),
         bottomNavigationBar: Builder(builder: (context) => Container(
           
           decoration: const BoxDecoration(

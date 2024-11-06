@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class TitleTran extends StatefulWidget {
-  const TitleTran({super.key});
+  const TitleTran({
+    super.key,
+    required this.title,
+    });
+
+    final String title;
 
   @override
   _TitleTranState createState() => _TitleTranState(); 
@@ -17,7 +22,7 @@ class _TitleTranState extends State<TitleTran> {
       child: Padding(padding: EdgeInsets.only(right: 25, left: 25, top: 5 ),
         child: Column(
           children: [
-            Image.asset("images/bramtitle.png", fit: BoxFit.cover,)
+            Image.asset(widget.title, fit: BoxFit.cover,)
           ],
         ),
       )
