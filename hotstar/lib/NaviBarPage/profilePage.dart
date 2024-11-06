@@ -5,12 +5,12 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Profile Page"),
-      ),
-      body: Center(
-        child: const Text("My Spaca"),
+    return SizedBox.expand(
+      child: Center(
+        child: Text(
+          "Hello Profile Page",
+          style: TextStyle(color: Colors.white),
+        ),
       ),
     );
   }

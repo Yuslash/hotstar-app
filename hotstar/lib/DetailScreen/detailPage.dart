@@ -19,9 +19,8 @@ class _DetailPageState extends State<DetailPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xFF0F1014),
-      body: Padding(padding: const EdgeInsets.only(top: 35, left: 10, right: 10,),
+    return const SizedBox.expand(
+      child: Padding(padding: EdgeInsets.only(top: 35, left: 10, right: 10,),
         child: SingleChildScrollView(
           child: Column(
             children: [

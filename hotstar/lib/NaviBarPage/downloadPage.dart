@@ -5,12 +5,12 @@ class DownloadPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Download Page"),
-      ),
-      body: const Center(
-        child:  Text("Download Page"),
+    return SizedBox.expand(
+      child: Center(
+        child: Text(
+          "Hello Download page",
+          style: TextStyle(color: Colors.white),
+        ),
       ),
     );
   }

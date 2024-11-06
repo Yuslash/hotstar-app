@@ -12,8 +12,24 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+    int currentIndex = 0;
+
+    final List<Widget> _pages = [
+
+      HomePage(),
+      SearchBarPage(),
+      NewsPage(),
+      DownloadPage(),
+      ProfilePage()
+    ];
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +37,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: _background,
-        body: DetailPage(),
+        body: _pages[currentIndex],
         bottomNavigationBar: Builder(builder: (context) => Container(
           
           decoration: const BoxDecoration(
@@ -38,24 +54,11 @@ class MyApp extends StatelessWidget {
                       unselectedFontSize: 10,
                       unselectedItemColor: Color(0xFF878B93),
                       selectedLabelStyle: TextStyle(fontWeight: FontWeight.w800, height: 2.3),
+                      currentIndex: currentIndex,
                       onTap: (index) {
-                        if (index == 1) {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const SearchBarPage()));
-                        } else if(index == 2) {
-                          Navigator.push(
-                            context, 
-                            MaterialPageRoute(builder: (context) => const NewsPage())
-                          );
-                        } else if(index == 3) {
-                          Navigator.push(context, 
-                          MaterialPageRoute(builder: (context) => const DownloadPage()));
-                        } else if(index == 4) {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfilePage()));
-                        }
-
+                        setState(() {
+                          currentIndex = index;
+                        });
                       },
                       items: [
                         BottomNavigationBarItem(
@@ -77,7 +80,8 @@ class MyApp extends StatelessWidget {
                           ),
                         ), 
                       ),
+        ),
       ),
-    ));
+    );
   }
 }
