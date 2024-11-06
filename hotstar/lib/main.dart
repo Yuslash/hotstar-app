@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: _background,
-        body: DetailPage(),
+        body: _pages[currentIndex],
         bottomNavigationBar: Builder(builder: (context) => Container(
           
           decoration: const BoxDecoration(

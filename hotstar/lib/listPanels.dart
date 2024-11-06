@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/ActualList/actualList.dart';
 import 'package:hotstar/AlterApi/animationList.dart';
 import 'package:hotstar/InnerPanels/continuePanel.dart';
 import 'package:hotstar/InnerPanels/fantasyPanel.dart';
@@ -25,7 +26,7 @@ class _ListPanelsState extends State<ListPanels> {
             RowList(title: "Continue Watching", marspace: 10),
             ContinuePanel(),
             RowList(title: "Latest Release", marspace: 5),
-            LatestRelease(),
+            ActualList(),
             RowList(title: "Fantasy Movies", marspace: 5),
             FantasyPanel(),
             RowList(title: "Animations Movies", marspace: 5),
