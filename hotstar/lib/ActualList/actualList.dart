@@ -19,7 +19,6 @@ class _ActualListState extends State<ActualList> {
 
     setState(() {
       items = jsonDecode(response.body);
-      print(items);
       });
   }
 

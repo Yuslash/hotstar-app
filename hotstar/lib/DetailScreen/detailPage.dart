@@ -12,6 +12,7 @@ import 'package:hotstar/NaviBarPage/newsPage.dart';
 import 'package:hotstar/NaviBarPage/profilePage.dart';
 import 'package:hotstar/NaviBarPage/searchPage.dart';
 import 'package:hotstar/homePage.dart';
+import 'package:hotstar/main.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({
@@ -51,6 +52,7 @@ class _DetailPageState extends State<DetailPage> {
         child: Padding(padding: EdgeInsets.only(top: 35, left: 10, right: 10,),
           child: SingleChildScrollView(
             child: Column(
+              mainAxisSize: MainAxisSize.max,
               children: [
                 Column(
                 children: [
@@ -93,7 +95,10 @@ class _DetailPageState extends State<DetailPage> {
                   currentIndex = index;
                 });
 
-                if(index == 1) {
+                if (index == 0) {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+                }
+                  else if(index == 1) {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => SearchBarPage()));
                 } else if(index == 2) {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
