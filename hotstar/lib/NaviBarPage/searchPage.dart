@@ -3,6 +3,7 @@ import 'package:hotstar/NaviBarPage/downloadPage.dart';
 import 'package:hotstar/NaviBarPage/newsPage.dart';
 import 'package:hotstar/NaviBarPage/profilePage.dart';
 import 'package:hotstar/homePage.dart';
+import 'package:hotstar/main.dart';
 
 class SearchBarPage extends StatefulWidget {
   const SearchBarPage({ super.key });
@@ -57,9 +58,21 @@ class _SearchBarPageState extends State<SearchBarPage> {
                   currentIndex = index;
                 });
 
-                if (index == 1) {
+                if (index == 0) {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyApp()));
+                } else if (index == 1) {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => SearchBarPage()));
+                } else if (index == 2) {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => NewsPage()));
+                } else if (index == 3) {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => DownloadPage()));
+                } else if (index == 4) {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ProfilePage()));
                 }
               },
               items: [

@@ -95,6 +95,12 @@ class _DetailPageState extends State<DetailPage> {
 
                 if(index == 1) {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => SearchBarPage()));
+                } else if(index == 2) {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
+                } else if(index == 3) {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => DownloadPage()));
+                } else if(index == 4) {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
                 }
 
               },
