@@ -92,6 +92,11 @@ class _DetailPageState extends State<DetailPage> {
                 setState(() {
                   currentIndex = index;
                 });
+
+                if(index == 1) {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => SearchBarPage()));
+                }
+
               },
               items: [
                 BottomNavigationBarItem(
