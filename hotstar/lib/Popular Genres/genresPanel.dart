@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar/Popular%20Genres/popularGenres.dart';
-import 'package:hotstar/Popular%20Langauages/popularLanguage.dart';
 
 class GenresPanel extends StatefulWidget {
   const GenresPanel({super.key});

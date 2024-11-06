@@ -5,7 +5,12 @@ import 'package:hotstar/InnerPanels/latestRelease.dart';
 import 'package:hotstar/rowList.dart';
 
 class SecondSectorColumn extends StatefulWidget {
-  const SecondSectorColumn({super.key});
+  const SecondSectorColumn({
+    super.key,
+    required this.ipno,
+    });
+
+    final String ipno;
 
   @override
   _SecondSectorColumnState createState() => _SecondSectorColumnState();
@@ -13,7 +18,6 @@ class SecondSectorColumn extends StatefulWidget {
 
 class _SecondSectorColumnState extends State<SecondSectorColumn> {
 
-  String portno = "0.18";
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +30,7 @@ class _SecondSectorColumnState extends State<SecondSectorColumn> {
             RowList(title: "Fantasy Movies", marspace: 5),
             FantasyPanel(),
             RowList(title: "Animation Movies", marspace: 5),
-            AnimationList(port: portno),
+            AnimationList(port: widget.ipno),
           ],
         ),
       ),

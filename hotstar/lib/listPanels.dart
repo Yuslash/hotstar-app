@@ -14,7 +14,7 @@ class ListPanels extends StatefulWidget {
 
 class _ListPanelsState extends State<ListPanels> {
 
-  String portno = "0.18";
+  String portno = "18.18";
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,6 @@ class _ListPanelsState extends State<ListPanels> {
       child: Padding(padding: EdgeInsets.symmetric(horizontal: 10), 
         child: Column(
           children: [
-
             RowList(title: "Continue Watching", marspace: 10),
             ContinuePanel(),
             RowList(title: "Latest Release", marspace: 5),

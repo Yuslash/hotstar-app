@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:hotstar/AdvertPanel/AdvertPanel.dart';
 import 'package:hotstar/Popular%20Genres/genresPanel.dart';
 import 'package:hotstar/Popular%20Langauages/languagePanel.dart';
 import 'package:hotstar/rowList.dart';
 
 class FifthLangGenreSector extends StatefulWidget {
-  const FifthLangGenreSector({super.key});
+  const FifthLangGenreSector({
+    super.key,
+    required this.ipno,
+    });
+
+    final String ipno;
 
   @override
   _FifthLangGenreSectorState createState() => _FifthLangGenreSectorState();

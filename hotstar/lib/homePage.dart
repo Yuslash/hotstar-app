@@ -25,7 +25,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  String noip = "0.18";
+  String noip = "18.18";
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +41,12 @@ class _HomePageState extends State<HomePage> {
             WatchButton(),
             ListPanels(),
             AdvertPanel(title: "Disney+ Hotstar", subTitle: "Diwali BlockBusterMovies!", image: "images/banner.jpeg",),
-            SecondSectorColumn(),
+            SecondSectorColumn(ipno: noip,),
             AdvertPanel(title: "Hotstar+ Specials", subTitle: "Welcome to HotstarSpecials", image: "images/banner.jpeg"),
-            ThirdSectorColumn(),
+            ThirdSectorColumn(ipno: noip,),
             AdvertPanel(title: "Animation DenMark", subTitle: "Let the crack begin!", image: "images/banner.jpeg"),
-            FourthStudioSector(),
-            FifthLangGenreSector(),
+            FourthStudioSector(ipno: noip),
+            FifthLangGenreSector(ipno: noip,),
             SixthSectorColumn(ipno: noip)
           ],
         ),

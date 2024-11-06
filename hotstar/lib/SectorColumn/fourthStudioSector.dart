@@ -3,7 +3,12 @@ import 'package:hotstar/IndusSelection/studioSelect.dart';
 import 'package:hotstar/IndusSelection/twoTowSelect.dart';
 
 class FourthStudioSector extends StatefulWidget {
-  const FourthStudioSector({super.key});
+  const FourthStudioSector({
+    super.key,
+    required this.ipno,
+    });
+
+    final String ipno;
 
   @override
   _FourthStudioSectorState createState() => _FourthStudioSectorState();
