@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class SectionGenre extends StatefulWidget {
-  const SectionGenre({super.key});
+  const SectionGenre({
+    super.key,
+    required this.genre,
+    });
+
+    final List<String> genre;
 
   @override
   _SectionGenreState createState() => _SectionGenreState();
@@ -26,10 +31,10 @@ class _SectionGenreState extends State<SectionGenre> {
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
-          children: items.asMap().entries.map((entry) {
+          children: widget.genre.asMap().entries.map((entry) {
 
             int index = entry.key;
             String item = entry.value;

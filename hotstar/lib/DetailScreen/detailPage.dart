@@ -22,6 +22,8 @@ class DetailPage extends StatefulWidget {
     required this.year,
     required this.duration,
     required this.lenlang,
+    required this.genre,
+    required this.description
     });
 
     final String image;
@@ -29,6 +31,8 @@ class DetailPage extends StatefulWidget {
     final String year;
     final String duration;
     final int lenlang;
+    final List<String> genre;
+    final String description;
 
   @override
   _DetailPageState createState() => _DetailPageState();
@@ -67,8 +71,8 @@ class _DetailPageState extends State<DetailPage> {
                 Overview(year: widget.year, duration: widget.duration, lenlang: widget.lenlang.toString(),),
                 SizedBox(height: 10),
                 WatchNowButton(),
-                SectionGenre(),
-                AboutDescription(),
+                SectionGenre(genre: widget.genre),
+                AboutDescription(description: widget.description,),
                 Options(),
                 Morelike(),
                 SizedBox(height: 20),

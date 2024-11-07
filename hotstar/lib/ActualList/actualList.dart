@@ -47,6 +47,8 @@ class _ActualListState extends State<ActualList> {
                     year: item['year'],
                     duration: item['duration'],
                     lenlang: item['language'].length,
+                    genre: List<String>.from(item['genres']),
+                    description: item['about'],
                         ),
                       ),
                     );
