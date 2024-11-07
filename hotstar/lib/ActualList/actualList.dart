@@ -29,6 +29,7 @@ class _ActualListState extends State<ActualList> {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
@@ -40,7 +41,15 @@ class _ActualListState extends State<ActualList> {
               padding: const EdgeInsets.only(right: 5),
               child: GestureDetector(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage(image: item['banner'], title: item['title'])));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage(
+                    image: item['banner'], 
+                    title: item['title'],
+                    year: item['year'],
+                    duration: item['duration'],
+                    lenlang: item['language'].length,
+                        ),
+                      ),
+                    );
                 },
 
                 child: Container(

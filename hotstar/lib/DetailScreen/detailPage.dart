@@ -19,10 +19,16 @@ class DetailPage extends StatefulWidget {
     super.key,
     required this.image,
     required this.title,
+    required this.year,
+    required this.duration,
+    required this.lenlang,
     });
 
     final String image;
     final String title;
+    final String year;
+    final String duration;
+    final int lenlang;
 
   @override
   _DetailPageState createState() => _DetailPageState();
@@ -58,7 +64,7 @@ class _DetailPageState extends State<DetailPage> {
                 children: [
                 Poster(image: widget.image),
                 TitleTran(title: widget.title),
-                Overview(),
+                Overview(year: widget.year, duration: widget.duration, lenlang: widget.lenlang.toString(),),
                 SizedBox(height: 10),
                 WatchNowButton(),
                 SectionGenre(),
