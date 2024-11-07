@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar/NaviBarPage/SearchPage/searchInput.dart';
+import 'package:hotstar/NaviBarPage/SearchPage/trendingButton.dart';
 
 class Experience extends StatefulWidget {
   const Experience({ Key? key }) : super(key: key);
@@ -16,8 +17,13 @@ class _ExperienceState extends State<Experience> {
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
-          child: Column(children: [
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: [
             SearchInput(),
+            TrendingButton(),
           ],)
           ),
       ),

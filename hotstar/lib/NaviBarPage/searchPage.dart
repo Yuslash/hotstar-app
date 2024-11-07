@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar/NaviBarPage/SearchPage/experience.dart';
-import 'package:hotstar/NaviBarPage/SearchPage/searchInput.dart';
 import 'package:hotstar/NaviBarPage/downloadPage.dart';
 import 'package:hotstar/NaviBarPage/newsPage.dart';
 import 'package:hotstar/NaviBarPage/profilePage.dart';
