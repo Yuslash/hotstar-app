@@ -31,7 +31,7 @@ class _TrendingButtonState extends State<TrendingButton> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Text("Trending", style: TextStyle(color: Color(0xFFE5E6EC), fontSize: 17, fontWeight: FontWeight.w600, fontFamily: 'inter' )),
+          Text("Trending in", style: TextStyle(color: Color(0xFFE5E6EC), fontSize: 17, fontWeight: FontWeight.w600, fontFamily: 'inter' )),
           SizedBox(height: 10),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,

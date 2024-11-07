@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/NaviBarPage/SearchPage/filterData.dart';
 import 'package:hotstar/NaviBarPage/SearchPage/searchInput.dart';
 import 'package:hotstar/NaviBarPage/SearchPage/trendingButton.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class Experience extends StatefulWidget {
   const Experience({ Key? key }) : super(key: key);
@@ -10,6 +13,22 @@ class Experience extends StatefulWidget {
 }
 
 class _ExperienceState extends State<Experience> {
+
+  List<dynamic> items = [];
+
+  Future<void> fetchData() async {
+    final response = await http.get(Uri.parse("http://192.162.18.18:3000/actual"));
+    setState(() {
+      items = jsonDecode(response.body);
+    }); 
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    fetchData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,6 +43,7 @@ class _ExperienceState extends State<Experience> {
             children: [
             SearchInput(),
             TrendingButton(),
+            FilterData(data: items)
           ],)
           ),
       ),
