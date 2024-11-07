@@ -14,33 +14,7 @@ class FilterData extends StatefulWidget {
 
 class _FilterDataState extends State<FilterData> {
 
-  List<dynamic> lists = [
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-    "sok",
-  ];
+  List<dynamic> lists = List.generate(25, (index) => "sok");
 
 
   @override
