@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/NaviBarPage/SearchPage/experience.dart';
+import 'package:hotstar/NaviBarPage/SearchPage/searchInput.dart';
 import 'package:hotstar/NaviBarPage/downloadPage.dart';
 import 'package:hotstar/NaviBarPage/newsPage.dart';
 import 'package:hotstar/NaviBarPage/profilePage.dart';
@@ -32,9 +34,7 @@ class _SearchBarPageState extends State<SearchBarPage> {
       backgroundColor: Color(0xFF0F1014),
 
       body: SizedBox.expand(
-          child: Center(
-            child: Text("Search Page", style: TextStyle(color: Colors.white),),
-          ),
+          child: Experience(),
         ),
         bottomNavigationBar: Builder(
         builder: (context) => Container(
