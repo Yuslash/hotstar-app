@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class TrendingButton extends StatefulWidget {
-  const TrendingButton({ Key? key }) : super(key: key);
+  const TrendingButton({
+    super.key,
+    required this.items,
+    });
+
+    final List<dynamic> items;
 
   @override
   _TrendingButtonState createState() => _TrendingButtonState();
@@ -11,18 +16,8 @@ class _TrendingButtonState extends State<TrendingButton> {
     
   int currentIndex = 0;
 
-  List<dynamic> items = [
-    "India",
-    "Movies",
-    "Shows",
-    "Actions",
-    "Comedy",
-    "Crime"
-  ];
-
   @override
   Widget build(BuildContext context) {
-
 
     return Container(
       margin: EdgeInsets.only(top: 20),
@@ -39,7 +34,7 @@ class _TrendingButtonState extends State<TrendingButton> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
-              children: items.asMap().entries.map((entry) {
+              children: widget.items.asMap().entries.map((entry) {
             
                   int index =  entry.key;
                   String value = entry.value;

@@ -14,15 +14,12 @@ class FilterData extends StatefulWidget {
 
 class _FilterDataState extends State<FilterData> {
 
-  List<dynamic> lists = List.generate(25, (index) => "sok");
-
-
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 10),
       child: Wrap(
-        children: lists.asMap().entries.map((list) {
+        children: widget.data.asMap().entries.map((list) {
 
             int index = list.key;
             String value = list.value;
@@ -31,7 +28,7 @@ class _FilterDataState extends State<FilterData> {
             child: Container(
               width: ((index - 6) % 8 == 0 && index >= 6) ? 244 : 120,
               height: 178,
-              color: Colors.red,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(2), color: Colors.red),
             ),
           );
 
