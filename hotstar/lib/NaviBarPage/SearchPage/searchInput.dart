@@ -10,6 +10,9 @@ class SearchInput extends StatefulWidget {
 class _SearchInputState extends State<SearchInput> {
   @override
   Widget build(BuildContext context) {
+
+      final TextEditingController _searchController = TextEditingController();
+
     return Container(
       height: 40,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Color(0xFFE1E6F0)),
@@ -20,26 +23,28 @@ class _SearchInputState extends State<SearchInput> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Icon(Icons.search),
-                  SizedBox(width: 12),
-                  Text(
-                    "Movies, Shows and more",
-                    style: TextStyle(
-                        color: Color(0xFF00020C),
-                        fontSize: 13,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: 'inter'),
+              Icon(Icons.search),
+              SizedBox(width: 12),
+              Expanded(child: TextField(
+                controller: _searchController,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  hintText: "Movies, Shows and more",
+                  hintStyle: TextStyle(
+                  color: Color(0xFF070D14),
+                  fontSize: 13,
+                  fontWeight: FontWeight.w400,
+                  fontFamily: 'inter',
                   ),
-                  ],
+                  contentPadding: EdgeInsets.symmetric(vertical: 14, horizontal: 0)
                 ),
-              ),
-              Icon(Icons.mic_none)
+              )),
+            IconButton(
+              icon: Icon(Icons.mic_none),
+              onPressed: () {
+                // Implement your microphone functionality here
+              },
+            ),
             ],
         ),
       ),
