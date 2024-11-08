@@ -17,10 +17,11 @@ class _ExperienceState extends State<Experience> {
   List<dynamic> itemss = [];
 
   Future<void> fetchData() async {
-    final response = await http.get(Uri.parse("http://192.162.37.18:3000/test"));
-    setState(() {
-      itemss = jsonDecode(response.body);
-    }); 
+    final response = await http.get(Uri.parse("http://192.168.37.18:3000/test"));
+    
+      setState(() {
+        itemss = jsonDecode(response.body);
+      });
   }
 
   @override
@@ -31,11 +32,8 @@ class _ExperienceState extends State<Experience> {
 
 
   @override
-  Widget build(BuildContext context) {
 
-    final genres = itemss.isNotEmpty && itemss[0].containsKey('genres')
-        ? itemss[0]['genres']
-        : null;
+  Widget build(BuildContext context) {
 
     return Container(
       margin: EdgeInsets.only(top: 80),
@@ -48,8 +46,8 @@ class _ExperienceState extends State<Experience> {
             mainAxisSize: MainAxisSize.max,
             children: [
             SearchInput(),
-           if(genres != null) TrendingButton(items: genres,),
-           if(genres != null) FilterData(data: genres)
+           TrendingButton(items: itemss[0]['genres'],),
+           FilterData()
           ],)
           ),
       ),

@@ -8,7 +8,7 @@ export default function ActualReferenceData(app, client) {
 
         const data = await collection.find({}).toArray()
 
-        res.json(data)
+        res.status(200).json(data)
 
     })
 
