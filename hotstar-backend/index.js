@@ -11,6 +11,7 @@ import AnimationListApi from './AnimationListApi.js'
 import HorrorSection from './HorroSection.js'
 import MysterySeries from './MysterySeries.js'
 import ActualReferenceData from './ActualReferenceData.js'
+import TestData from './TestData.js'
 dotenv.config()
 
 
@@ -39,7 +40,8 @@ HorrorSection(app, client)
 MysterySeries(app, client, 'Mystery', 'mystery')
 MysterySeries(app, client, 'Action', 'action')
 ActualReferenceData(app, client)
+TestData(app, client)
 
 app.listen(port, '0.0.0.0', () => {
-    console.log(`Server is Running at http://192.168.18.18:${port}`)
+    console.log(`Server is Running at http://192.168.37.18:${port}`)
 })

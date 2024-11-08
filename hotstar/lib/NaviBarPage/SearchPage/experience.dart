@@ -14,12 +14,12 @@ class Experience extends StatefulWidget {
 
 class _ExperienceState extends State<Experience> {
 
-  List<dynamic> items = [];
+  List<dynamic> itemss = [];
 
   Future<void> fetchData() async {
-    final response = await http.get(Uri.parse("http://192.162.18.18:3000/actual"));
+    final response = await http.get(Uri.parse("http://192.162.37.18:3000/test"));
     setState(() {
-      items = jsonDecode(response.body);
+      itemss = jsonDecode(response.body);
     }); 
   }
 
@@ -29,115 +29,14 @@ class _ExperienceState extends State<Experience> {
     fetchData();
   }
 
-  List<String> genres = [
-    "Action",
-    "Adventure",
-    "Animation",
-    "Biography",
-    "Comedy",
-    "Crime",
-    "Documentary",
-    "Drama",
-    "Family",
-    "Fantasy",
-    "History",
-    "Horror",
-    "Music",
-    "Musical",
-    "Mystery",
-    "Romance",
-    "Sci-Fi",
-    "Sports",
-    "Superhero",
-    "Thriller",
-    "War",
-    "Western",
-    "Psychological",
-    "Suspense",
-    "Historical Fiction",
-  ];
-  
-  List<String> doubleGenre = [
-    "Action",
-    "Adventure",
-    "Animation",
-    "Biography",
-    "Comedy",
-    "Crime",
-    "Documentary",
-    "Drama",
-    "Family",
-    "Fantasy",
-    "History",
-    "Horror",
-    "Music",
-    "Musical",
-    "Mystery",
-    "Romance",
-    "Sci-Fi",
-    "Sports",
-    "Superhero",
-    "Thriller",
-    "War",
-    "Western",
-    "Psychological",
-    "Suspense",
-    "Historical Fiction",
-    "Action",
-    "Adventure",
-    "Animation",
-    "Biography",
-    "Comedy",
-    "Crime",
-    "Documentary",
-    "Drama",
-    "Family",
-    "Fantasy",
-    "History",
-    "Horror",
-    "Music",
-    "Musical",
-    "Mystery",
-    "Romance",
-    "Sci-Fi",
-    "Sports",
-    "Superhero",
-    "Thriller",
-    "War",
-    "Western",
-    "Psychological",
-    "Suspense",
-    "Historical Fiction",
-    "Action",
-    "Adventure",
-    "Animation",
-    "Biography",
-    "Comedy",
-    "Crime",
-    "Documentary",
-    "Drama",
-    "Family",
-    "Fantasy",
-    "History",
-    "Horror",
-    "Music",
-    "Musical",
-    "Mystery",
-    "Romance",
-    "Sci-Fi",
-    "Sports",
-    "Superhero",
-    "Thriller",
-    "War",
-    "Western",
-    "Psychological",
-    "Suspense",
-    "Historical Fiction",
-  ];
-
 
   @override
   Widget build(BuildContext context) {
+
+    final genres = itemss.isNotEmpty && itemss[0].containsKey('genres')
+        ? itemss[0]['genres']
+        : null;
+
     return Container(
       margin: EdgeInsets.only(top: 80),
       child: Padding(
@@ -149,8 +48,8 @@ class _ExperienceState extends State<Experience> {
             mainAxisSize: MainAxisSize.max,
             children: [
             SearchInput(),
-            TrendingButton(items: genres,),
-            FilterData(data: doubleGenre)
+           if(genres != null) TrendingButton(items: genres,),
+           if(genres != null) FilterData(data: genres)
           ],)
           ),
       ),
