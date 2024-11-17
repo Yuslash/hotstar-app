@@ -38,7 +38,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: _background,
-        body: SearchBarPage(),
+        body: HomePage(),
         // bottomNavigationBar: Builder(
         //   builder: (context) => Container(
         //     decoration: const BoxDecoration(
