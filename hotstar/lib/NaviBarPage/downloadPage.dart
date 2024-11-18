@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/NaviBarPage/DownloadPage/downExperience.dart';
 import 'package:hotstar/NaviBarPage/newsPage.dart';
 import 'package:hotstar/NaviBarPage/profilePage.dart';
 import 'package:hotstar/NaviBarPage/searchPage.dart';
@@ -28,12 +29,7 @@ class _DownloadPageState extends State<DownloadPage> {
     return Scaffold(
       backgroundColor: Color(0xFF0F1014),
       body: SizedBox.expand(
-        child: Center(
-          child: Text(
-            "Download Page",
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
+        child: DownExperience()
       ),
       bottomNavigationBar: Builder(
         builder: (context) => Container(
@@ -67,8 +63,7 @@ class _DownloadPageState extends State<DownloadPage> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => NewsPage()));
                 } else if (index == 3) {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DownloadPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => DownloadPage()));
                 } else if (index == 4) {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => ProfilePage()));

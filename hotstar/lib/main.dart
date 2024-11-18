@@ -24,22 +24,16 @@ class _MyAppState extends State<MyApp> {
 
   final List<Widget> _pages = [
     HomePage(),
-    SearchBarPage(),
-    NewsPage(),
-    DownloadPage(),
-    ProfilePage(),
+    SearchBarPage(), NewsPage(), DownloadPage(), ProfilePage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: _background,
-        body: HomePage(),
-        bottomNavigationBar: Builder(
-          builder: (context) => Container(
-            decoration: const BoxDecoration(
+      home: Scaffold( backgroundColor: _background, 
+      
+      body: DownloadPage(), bottomNavigationBar: Builder( builder: (context) => Container( decoration: const BoxDecoration(
                 border: Border(
                     top: BorderSide(color: Color(0xff98999B), width: 0.2))),
             child: Padding(
