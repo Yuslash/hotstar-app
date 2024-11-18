@@ -51,7 +51,10 @@ class _FilterDataState extends State<FilterData> {
             child: Container(
               width: ((index - 6) % 8 == 0 && index >= 6) ? 244 : 120,
               height: 178,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(2), color: Colors.red),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: value['banner'] != null ? Image.network(value['banner'], fit: BoxFit.cover, errorBuilder: (context, error, stackTrace) => Icon(Icons.broken_image, color: Colors.grey,),) : Icon(Icons.broken_image, color: Colors.grey,), 
+              ), 
             ),
           );
 
