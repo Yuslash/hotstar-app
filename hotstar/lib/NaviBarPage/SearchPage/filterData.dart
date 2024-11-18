@@ -21,7 +21,7 @@ class _FilterDataState extends State<FilterData> {
 
   Future<void> fetchData() async {
 
-    final response = await http.get(Uri.parse("http://192.168.37.18:3000/test"));
+    final response = await http.get(Uri.parse("http://192.168.90.18:3000/test"));
     if (response.statusCode == 200) {
       setState(() {
         items = List<Map<String, dynamic>>.from(jsonDecode(response.body));

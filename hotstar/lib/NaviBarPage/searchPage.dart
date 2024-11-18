@@ -7,7 +7,10 @@ import 'package:hotstar/homePage.dart';
 import 'package:hotstar/main.dart';
 
 class SearchBarPage extends StatefulWidget {
-  const SearchBarPage({ super.key });
+  const SearchBarPage({ 
+    super.key 
+        });
+
 
   @override 
   _SearchBarPageState createState() => _SearchBarPageState();
@@ -16,6 +19,8 @@ class SearchBarPage extends StatefulWidget {
 class _SearchBarPageState extends State<SearchBarPage> {
 
   int currentIndex = 1;
+
+  String noip = "90.18"; 
 
   final List<Widget> _pages = [
     HomePage(),
@@ -33,7 +38,7 @@ class _SearchBarPageState extends State<SearchBarPage> {
       backgroundColor: Color(0xFF0F1014),
 
       body: SizedBox.expand(
-          child: Experience(),
+          child: Experience(ipno: noip,),
         ),
         bottomNavigationBar: Builder(
         builder: (context) => Container(

@@ -6,7 +6,13 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class Experience extends StatefulWidget {
-  const Experience({ Key? key }) : super(key: key);
+
+  const Experience({
+    super.key,
+    required this.ipno
+    });
+
+    final String ipno;
 
   @override
   _ExperienceState createState() => _ExperienceState();
@@ -17,7 +23,7 @@ class _ExperienceState extends State<Experience> {
   List<dynamic> itemss = [];
 
   Future<void> fetchData() async {
-    final response = await http.get(Uri.parse("http://192.168.37.18:3000/test"));
+    final response = await http.get(Uri.parse("http://192.168.${widget.ipno}:3000/test"));
     
       setState(() {
         itemss = jsonDecode(response.body);

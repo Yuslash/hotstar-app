@@ -11,10 +11,10 @@ class _SearchInputState extends State<SearchInput> {
   @override
   Widget build(BuildContext context) {
 
-      final TextEditingController _searchController = TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
 
     return Container(
-      height: 40,
+      height: 40, 
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Color(0xFFE1E6F0)),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),

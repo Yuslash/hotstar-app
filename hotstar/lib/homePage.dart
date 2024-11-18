@@ -25,7 +25,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  String noip = "18.18";
+  String noip = "90.18";
 
   @override
   Widget build(BuildContext context) {

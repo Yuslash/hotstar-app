@@ -19,6 +19,7 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
+
 class _MyAppState extends State<MyApp> { 
     int currentIndex = 0;
 
@@ -38,7 +39,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: _background,
-        body: HomePage(),
+        body: SearchBarPage(),
         // bottomNavigationBar: Builder(
         //   builder: (context) => Container(
         //     decoration: const BoxDecoration(
