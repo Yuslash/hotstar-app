@@ -53,7 +53,7 @@ class _ExperienceState extends State<Experience> {
             children: [
             SearchInput(),
            TrendingButton(items: itemss[0]['genres'],),
-           FilterData()
+           FilterData(ipno: widget.ipno,)
           ],)
           ),
       ),

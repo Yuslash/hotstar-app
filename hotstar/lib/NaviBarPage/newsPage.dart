@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/NaviBarPage/NewPage/newsExperience.dart';
 import 'package:hotstar/NaviBarPage/downloadPage.dart';
 import 'package:hotstar/NaviBarPage/profilePage.dart';
 import 'package:hotstar/NaviBarPage/searchPage.dart';
@@ -28,12 +29,7 @@ class _NewsPageState extends State<NewsPage> {
     return Scaffold(
       backgroundColor: Color(0xFF0F1014),
       body: SizedBox.expand(
-        child: Center(
-          child: Text(
-            "News Page",
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
+       child: NewsExperience(), 
       ),
       bottomNavigationBar: Builder(
         builder: (context) => Container(

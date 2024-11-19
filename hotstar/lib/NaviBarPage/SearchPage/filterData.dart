@@ -6,22 +6,23 @@ class FilterData extends StatefulWidget {
   const FilterData({
     super.key,
     // required this.data,
+    required this.ipno
     });
 
     // final List<dynamic> data;
+    final String ipno;
 
   @override
   _FilterDataState createState() => _FilterDataState();
 }
-
-class _FilterDataState extends State<FilterData> {
+ class _FilterDataState extends State<FilterData> {
 
   List<Map<String, dynamic>> items = [];
   bool isLoadin = true;
 
   Future<void> fetchData() async {
 
-    final response = await http.get(Uri.parse("http://192.168.90.18:3000/test"));
+    final response = await http.get(Uri.parse("http://192.168.${widget.ipno}:3000/test"));
     if (response.statusCode == 200) {
       setState(() {
         items = List<Map<String, dynamic>>.from(jsonDecode(response.body));
