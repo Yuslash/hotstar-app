@@ -131,10 +131,10 @@ class _NewsExperienceState extends State<NewsExperience> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            IconButton(onPressed: (){}, icon: Icon(Icons.notifications_active_outlined), padding: EdgeInsets.zero,constraints: BoxConstraints(), ),
+                            IconButton(onPressed: (){}, icon: Icon(Icons.notifications_active_outlined, size: 18,), padding: EdgeInsets.zero,constraints: BoxConstraints(), ),
                             Text("Remind Me on", style: TextStyle(color: Color(0xff0c1218), fontSize: 12, fontFamily: 'inter', fontWeight: FontWeight.w600),),
                             SizedBox(width: 4,),
-                            Text("Nov 8",style: TextStyle(color: Color(0xFF555a66), fontFamily: 'inter', fontSize: 12, fontWeight: FontWeight.w400),) 
+                            Text(item['release'],style: TextStyle(color: Color(0xFF555a66), fontFamily: 'inter', fontSize: 12, fontWeight: FontWeight.w400),) 
                           ],),
                       ), ], 
                   ),
