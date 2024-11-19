@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/Popular%20Genres/genresPanel.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -65,7 +66,7 @@ class _NewsExperienceState extends State<NewsExperience> {
                       Container(
                         height: 225,
                         child: ClipRRect(
-                          child: Image.asset("images/spiderman.jpg", fit: BoxFit.cover,),
+                          child: Image.asset(item['banner'], fit: BoxFit.cover,),
                         ), 
                       ),
                       Container(
@@ -83,18 +84,17 @@ class _NewsExperienceState extends State<NewsExperience> {
                         width: 149,
                         height: 71,
                         child: ClipRRect(
-                          child: Image.asset("images/spidertitle.png"),
+                          child: Image.asset(item['title']),
                         ), 
                       ),
-                      Text("Releasing on Nov 18", style: TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.w600, fontFamily: 'inter'),),
+                      Text("Releasing on ${item['release']}", style: TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.w600, fontFamily: 'inter'),),
                       SizedBox(height: 9),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         mainAxisSize: MainAxisSize.max,
-                         children: items.asMap().entries.map((item) {
-                  
-                          int index = item.key;
-                          String value = item.value;
+                         children: item['genres'].map<Widget>((genre) {
+
+                          int index = item['genres'].indexOf(genre);
                   
                             return Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -102,8 +102,8 @@ class _NewsExperienceState extends State<NewsExperience> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding:  EdgeInsets.only(right: 4,left: index == 0 ? 0 : 5),
-                                  child: Text(value, style: TextStyle(color: Color(0xFF959EA8), fontSize: 10.5, fontWeight: FontWeight.w600, fontFamily: 'inter'),),
+                                  padding:  EdgeInsets.only(left: index == 0 ? 0 : 5, right: 5),
+                                  child: Text(genre, style: TextStyle(color: Color(0xFF959EA8), fontSize: 10.5, fontWeight: FontWeight.w600, fontFamily: 'inter'),),
                                 ),
                                 Container(
                                   width: 2,
