@@ -49,7 +49,7 @@ class _NewsPageState extends State<NewsPage> {
     return Scaffold(
       backgroundColor: Color(0xFF0F1014),
       body: SizedBox.expand(
-       child: NewsExperience(banner: ,), 
+       child: NewsExperience(), 
       ), bottomNavigationBar: Builder(
         builder: (context) => Container(
           decoration: const BoxDecoration(
