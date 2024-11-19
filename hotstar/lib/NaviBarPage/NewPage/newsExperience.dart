@@ -118,7 +118,7 @@ class _NewsExperienceState extends State<NewsExperience> {
                         }).toList(),
                       ),
                       SizedBox(height: 4,),
-                      Text("When The worlds find out Jeyachandran is Spiderman", style:TextStyle(color: Color(0xFF555C6A), fontSize: 10.5, fontWeight: FontWeight.w500, fontFamily: 'inter') ,),
+                      Text(item['description'], style:TextStyle(color: Color(0xFF555C6A), fontSize: 10.5, fontWeight: FontWeight.w500, fontFamily: 'inter') ,),
                       SizedBox(height: 9),
                       Container(
                         height: 44,
