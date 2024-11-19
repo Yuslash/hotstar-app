@@ -9,7 +9,7 @@ class NewsExperience extends StatefulWidget {
 
 class _NewsExperienceState extends State<NewsExperience> {
 
-  final List<dynamic> items = [
+  final List<String> items = [
     "English",
     "Drama",
     "Fantasy",
@@ -58,15 +58,25 @@ class _NewsExperienceState extends State<NewsExperience> {
                       children: items.asMap().entries.map((item) {
 
                         int index = item.key;
-                        Map<String, dynamic> value = item.value;
+                        String value = item.value;
 
                           return Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(right: 5),
-                                child: Text(value, style: TextStyle(color: Colors.white),),
+                                padding:  EdgeInsets.only(right: 5,left: index == 0 ? 0 : 5),
+                                child: Text(value, style: TextStyle(color: Color(0xFF959EA9), fontSize: 10.5, fontWeight: FontWeight.w600),),
                               ),
-                              Text(".", style: TextStyle(color: Color(0xFF959EA9), fontSize: 10.5),)
+                              Container(
+                                width: 3,
+                                height: 3,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(100),
+                                  color: Color(0xFF53575F)
+                                ),
+                              ) 
                             ],
                           );
                       }).toList(),
