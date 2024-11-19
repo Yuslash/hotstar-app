@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
 
 class NewsExperience extends StatefulWidget {
-  const NewsExperience({ Key? key }) : super(key: key);
+    const NewsExperience({
+      super.key,
+      required this.banner,
+      required this.title,
+      required this.release,
+      required this.genre,
+      required this.description
+      });
+
+      final String banner;
+      final String title;
+      final String release;
+      final String genre;
+      final String description;
 
   @override
   _NewsExperienceState createState() => _NewsExperienceState();
@@ -26,11 +39,16 @@ class _NewsExperienceState extends State<NewsExperience> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
           children: [
-            Container(
-              height: 225,
-              child: ClipRRect(
-                child: Image.asset("images/spiderman.jpg", fit: BoxFit.cover,),
-              ), 
+            Column(
+              children: [
+                Container(
+                  height: 225,
+                  child: ClipRRect(
+                    child: Image.asset("images/spiderman.jpg", fit: BoxFit.cover,),
+                  ), 
+                ),
+                
+              ],
             ),
             Container(
               width: double.infinity,
@@ -50,12 +68,12 @@ class _NewsExperienceState extends State<NewsExperience> {
                         child: Image.asset("images/spidertitle.png"),
                       ), 
                     ),
-                    Text("Releasing on Nov 19", style: TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.w600),),
+                    Text("Releasing on Nov 19", style: TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.w600, fontFamily: 'inter'),),
                     SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       mainAxisSize: MainAxisSize.max,
-                      children: items.asMap().entries.map((item) {
+                       children: items.asMap().entries.map((item) {
 
                         int index = item.key;
                         String value = item.value;
@@ -67,7 +85,7 @@ class _NewsExperienceState extends State<NewsExperience> {
                             children: [
                               Padding(
                                 padding:  EdgeInsets.only(right: 5,left: index == 0 ? 0 : 5),
-                                child: Text(value, style: TextStyle(color: Color(0xFF959EA9), fontSize: 10.5, fontWeight: FontWeight.w600),),
+                                child: Text(value, style: TextStyle(color: Color(0xFF959EA9), fontSize: 10.5, fontWeight: FontWeight.w600, fontFamily: 'inter'),),
                               ),
                               Container(
                                 width: 3,
@@ -81,7 +99,26 @@ class _NewsExperienceState extends State<NewsExperience> {
                           );
                       }).toList(),
                     ),
-                  ], 
+                    SizedBox(height: 5,),
+                    Text("When The worlds find out Jeyachandran is Spiderman", style:TextStyle(color: Color(0xFF555C6B), fontSize: 10.5, fontWeight: FontWeight.w500, fontFamily: 'inter') ,),
+                    SizedBox(height: 10),
+                    Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: Color(0xFFE1E6F2),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          IconButton(onPressed: (){}, icon: Icon(Icons.notifications_active_outlined), padding: EdgeInsets.zero,constraints: BoxConstraints(), ),
+                          Text("Remind Me on", style: TextStyle(color: Color(0xFF0c1219), fontSize: 12, fontFamily: 'inter', fontWeight: FontWeight.w600),),
+                          SizedBox(width: 5,),
+                          Text("Nov 9",style: TextStyle(color: Color(0xFF555a66), fontFamily: 'inter', fontSize: 12, fontWeight: FontWeight.w400),) 
+                        ],),
+                    ), ], 
                 ),
               ) ,
             )

@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar/NaviBarPage/NewPage/newsExperience.dart';
 import 'package:hotstar/NaviBarPage/downloadPage.dart';
-import 'package:hotstar/NaviBarPage/profilePage.dart';
+ import 'package:hotstar/NaviBarPage/profilePage.dart';
 import 'package:hotstar/NaviBarPage/searchPage.dart';
 import 'package:hotstar/homePage.dart';
 import 'package:hotstar/main.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class NewsPage extends StatefulWidget {
-  const NewsPage({super.key});
+  const NewsPage({
+    super.key,
+    });
+
 
   @override
   State<NewsPage> createState() => _NewsPageState();
@@ -24,14 +29,28 @@ class _NewsPageState extends State<NewsPage> {
     ProfilePage(),
   ];
 
+  List<dynamic> items = [];
+
+  Future<void> fetchData() async {
+    final response = await http.get(Uri.parse("http://192.168.90.18:3000/news"));
+
+    setState(() {
+      items = jsonDecode(response.body);
+    });
+  }
+
+  void initState() {
+    super.initState();
+    fetchData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF0F1014),
       body: SizedBox.expand(
-       child: NewsExperience(), 
-      ),
-      bottomNavigationBar: Builder(
+       child: NewsExperience(banner: ,), 
+      ), bottomNavigationBar: Builder(
         builder: (context) => Container(
           decoration: const BoxDecoration(
               border: Border(

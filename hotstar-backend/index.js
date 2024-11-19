@@ -12,6 +12,7 @@ import HorrorSection from './HorroSection.js'
 import MysterySeries from './MysterySeries.js'
 import ActualReferenceData from './ActualReferenceData.js'
 import TestData from './TestData.js'
+import NewsData from './NewsData.js'
 dotenv.config()
 
 
@@ -41,6 +42,7 @@ MysterySeries(app, client, 'Mystery', 'mystery')
 MysterySeries(app, client, 'Action', 'action')
 ActualReferenceData(app, client)
 TestData(app, client)
+NewsData(app, client)
 
 app.listen(port, '0.0.0.0', () => {
     console.log(`Server is Running at http://192.168.90.18:${port}`)

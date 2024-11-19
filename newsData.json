@@ -1,0 +1,26 @@
+[
+    {
+        "banner": "images/spiderman.jpg",
+        "title": "images/spidertitle.png",
+        "release": "Releasing on Nov 19",
+        "genres": [
+            "English",
+            "Drama",
+            "Fantasy",
+            "Crime"
+        ],
+        "description": "When the worlds find out jeyachandran is SpiderMan"
+    },
+    {
+        "banner": "images/batman.jpg",
+        "title": "images/batitle.png",
+        "release": "Releasing on Sep 21",
+        "genres": [
+            "English",
+            "Gore",
+            "Fantasy",
+            "Crime"
+        ],
+        "description": "When the worlds find out jeyachandran is BatMan"
+    }
+]
