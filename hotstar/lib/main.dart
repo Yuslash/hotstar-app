@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold( backgroundColor: _background, 
       
-      body: NewsPage(), bottomNavigationBar: Builder( builder: (context) => Container( decoration: const BoxDecoration(
+      body: HomePage(), bottomNavigationBar: Builder( builder: (context) => Container( decoration: const BoxDecoration(
                 border: Border(
                     top: BorderSide(color: Color(0xff98999B), width: 0.2))),
             child: Padding(
