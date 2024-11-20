@@ -21,7 +21,14 @@ class _ProExperienceState extends State<ProExperience> {
   double height = MediaQuery.sizeOf(context).height;
 
     return Container(
-      color: Colors.blue,
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment(0.00, -1.00),
+          end: Alignment(0, 1),  
+          colors: [Color(0xFF001845), Color(0xff0f1014), Color(0xff0f1014)]
+          )
+      ),
      child: Particles(
       awayRadius: 150,
      particles: createParticles(), // List of particles
