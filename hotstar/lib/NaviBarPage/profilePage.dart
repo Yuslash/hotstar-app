@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/NaviBarPage/ProfilePage/proExperience.dart';
 import 'package:hotstar/NaviBarPage/downloadPage.dart';
 import 'package:hotstar/NaviBarPage/newsPage.dart';
 import 'package:hotstar/NaviBarPage/searchPage.dart';
@@ -29,12 +30,7 @@ class _ProfilePageState extends State<ProfilePage> {
       return Scaffold(
         backgroundColor: Color(0xFF0F1014),
         body: SizedBox.expand(
-          child: Center(
-            child: Text(
-              "Profile Page",
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
+         child: ProExperience(), 
         ),
         bottomNavigationBar: Builder(
           builder: (context) => Container(
