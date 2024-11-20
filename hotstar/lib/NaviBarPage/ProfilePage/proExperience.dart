@@ -49,7 +49,7 @@ class _ProExperienceState extends State<ProExperience> {
     for (int i = 0; i < 20; i++) {
       particles.add(Particle(
         color: Colors.white.withOpacity(0.6),
-        size: rng.nextDouble() * 3,
+       size: rng.nextDouble() * 1,
         velocity: Offset(rng.nextDouble() * 200 * randomSign(),
             rng.nextDouble() * 200 * randomSign()),
       ));

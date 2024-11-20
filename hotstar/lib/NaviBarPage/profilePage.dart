@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/NaviBarPage/ProfilePage/overlayProfile.dart';
 import 'package:hotstar/NaviBarPage/ProfilePage/proExperience.dart';
 import 'package:hotstar/NaviBarPage/downloadPage.dart';
 import 'package:hotstar/NaviBarPage/newsPage.dart';
@@ -35,9 +36,7 @@ class _ProfilePageState extends State<ProfilePage> {
           child:  ProExperience(), 
           ),
           SizedBox.expand(
-            child: Container(
-              color: Colors.red,
-            ),
+           child: OverlayProfile(), 
           )
           ],
         ),
