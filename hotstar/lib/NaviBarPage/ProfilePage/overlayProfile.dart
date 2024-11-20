@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/NaviBarPage/ProfilePage/bodyProfile.dart';
 
   const Color _liteText = Color(0xffc7d5f4);
 
@@ -38,7 +39,16 @@ class _OverlayProfileState extends State<OverlayProfile> {
               ],
             ),
             Container(
-              margin: EdgeInsets.only(top: 35),
+              decoration: BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(
+                    color: Color(0xff1d263a),
+                    width: 0.5
+                  )
+                )
+              ),
+              height: 90,
+              margin: EdgeInsets.only(top: 35,),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,7 +101,8 @@ class _OverlayProfileState extends State<OverlayProfile> {
                   ), 
                 ],
               ),
-            )
+            ),
+            BodyProfile()
           ], 
         ),
       ),
