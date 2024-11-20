@@ -35,7 +35,7 @@ class _ProExperienceState extends State<ProExperience> {
      height: 200,
      width: width,
      onTapAnimation: true,
-     awayAnimationDuration: const Duration(milliseconds: 100),
+     awayAnimationDuration: const Duration(milliseconds: 120),
      awayAnimationCurve: Curves.linear,
      enableHover: true,
      hoverRadius: 90,
