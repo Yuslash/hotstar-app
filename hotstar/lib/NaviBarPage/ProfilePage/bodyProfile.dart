@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/InnerPanels/continuePanel.dart';
+import 'package:hotstar/InnerPanels/latestRelease.dart';
 import 'package:hotstar/NaviBarPage/ProfilePage/profileAvatar.dart';
+import 'package:hotstar/rowList.dart';
 
 const Color _liteText = Color(0xffc7d5f4);
 
@@ -37,7 +40,11 @@ class _BodyProfileState extends State<BodyProfile> {
                 )
                  ],
             ),
-          ProfileAvatar() 
+          ProfileAvatar(),
+          RowList(title: "WatchList", marspace: 10),
+          LatestRelease(),
+          RowList(title: "Continue Watching", marspace: 10),
+          ContinuePanel()
         ],
       ), 
     );
