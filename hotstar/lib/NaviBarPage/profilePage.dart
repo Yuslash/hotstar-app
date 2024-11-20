@@ -29,8 +29,17 @@ class _ProfilePageState extends State<ProfilePage> {
     Widget build(BuildContext context) {
       return Scaffold(
         backgroundColor: Color(0xFF0F1014),
-        body: SizedBox.expand(
-         child: ProExperience(), 
+        body: Stack(
+          children:[ 
+            SizedBox.expand(
+          child:  ProExperience(), 
+          ),
+          SizedBox.expand(
+            child: Container(
+              color: Colors.red,
+            ),
+          )
+          ],
         ),
         bottomNavigationBar: Builder(
           builder: (context) => Container(
