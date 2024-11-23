@@ -45,5 +45,5 @@ TestData(app, client)
 NewsData(app, client)
 
 app.listen(port, '0.0.0.0', () => {
-    console.log(`Server is Running at http://192.168.90.18:${port}`)
+    console.log(`Server is Running at http://192.168.90.19:${port}`)
 })

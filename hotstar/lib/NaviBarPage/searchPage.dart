@@ -20,7 +20,7 @@ class _SearchBarPageState extends State<SearchBarPage> {
 
   int currentIndex = 1;
 
-  String noip = "90.18"; 
+  String noip = "90.19"; 
 
   final List<Widget> _pages = [
     HomePage(),

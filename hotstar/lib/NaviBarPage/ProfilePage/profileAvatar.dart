@@ -1,7 +1,4 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-
 class ProfileAvatar extends StatefulWidget {
   const ProfileAvatar({ Key? key }) : super(key: key);
 

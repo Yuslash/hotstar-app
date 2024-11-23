@@ -15,7 +15,7 @@ class _ActualListState extends State<ActualList> {
 
   Future<void> fetchData() async {
     final response =
-        await http.get(Uri.parse("http://192.168.90.18:3000/actual"));
+        await http.get(Uri.parse("http://192.168.90.19:3000/actual"));
 
     setState(() {
       items = jsonDecode(response.body);
