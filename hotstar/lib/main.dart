@@ -5,6 +5,7 @@ import 'package:hotstar/NaviBarPage/newsPage.dart';
 import 'package:hotstar/NaviBarPage/profilePage.dart';
 import 'package:hotstar/NaviBarPage/searchPage.dart';
 import 'package:hotstar/homePage.dart';
+import 'package:hotstar/introVideo.dart';
 
 const Color _background = Color(0xFF0F1014);
 
@@ -33,7 +34,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold( backgroundColor: _background, 
       
-      body: HomePage(), bottomNavigationBar: Builder( builder: (context) => Container( decoration: const BoxDecoration(
+      body: IntroVideo(), bottomNavigationBar: Builder( builder: (context) => Container( decoration: const BoxDecoration(
                 border: Border(
                     top: BorderSide(color: Color(0xff98999B), width: 0.2))),
             child: Padding(
