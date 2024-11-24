@@ -14,6 +14,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
+  
   const MyApp({super.key});
 
   @override
@@ -34,7 +35,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold( backgroundColor: _background, 
       
-      body: IntroVideo(), bottomNavigationBar: Builder( builder: (context) => Container( decoration: const BoxDecoration(
+      body: HomePage(), bottomNavigationBar: Builder( builder: (context) => Container( decoration: const BoxDecoration(
                 border: Border(
                     top: BorderSide(color: Color(0xff98999B), width: 0.2))),
             child: Padding(
