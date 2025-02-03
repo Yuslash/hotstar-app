@@ -28,11 +28,11 @@ Welcome to the **Hotstar Clone**, where pixels come to life and your device gets
 
 | <img src="screenshots/4.png" width="90%"> | <img src="screenshots/5.png" width="90%"> | <img src="screenshots/6.png" width="90%"> |
 |:---:|:---:|:---:|
-| *Trending Now* | *Movie Details* | *Search* |
+| *Search Page* | *I dont know what is this page* | *Download Page* |
 
 | <img src="screenshots/7.png" width="90%"> | <img src="screenshots/8.png" width="90%"> |
 |:---:|:---:|
-| *Profile* | *Settings* |  
+| *Profile* | *Just an another ui* |  
 
 </div>  
 
